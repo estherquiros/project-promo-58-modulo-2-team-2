@@ -1,23 +1,16 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+// Core
+@use './core/reset';
+@use './core/variables';
 
-:root {
-  font-family: Arial, Helvetica, sans-serif;
-}
+// Layout
+@use './layout/footer';
+@use './layout/landing';
+@use './layout/form';
 
-body {
-  background-color: #555;
-  color: #fff;
-}
 
-.header {
-  border-bottom: solid 5px darkcyan;
-}
-
-.title {
-  line-height: 4rem;
-  padding-inline: 2rem;
-}
+// Sections
+@use './sections/form-content';
+@use './sections/preview';
+@use './sections/sections_form-content/design';
+@use './sections/sections_form-content/fill';
+@use './sections/sections_form-content/share';
