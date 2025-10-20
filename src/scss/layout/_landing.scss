@@ -8,12 +8,27 @@ $font_printwriter: "Special Elite", system-ui;
 .landing {
   position: relative;
   background-color: $color_backgorund;
-   background-image:
-   /* Degradado del centro hacia afuera*/
-    radial-gradient(circle at top left, rgba(0, 0, 0, 0.55) 0%, transparent 40%),
-    radial-gradient(circle at top right, rgba(0, 0, 0, 0.25) 0%, transparent 20%),
-    radial-gradient(circle at bottom left, rgba(0, 0, 0, 0.25) 0%, transparent 20%),
-    radial-gradient(circle at bottom right, rgba(0, 0, 0, 0.35) 0%, transparent 30%);
+  background-image:
+   /* Degradado del centro hacia afuera*/ radial-gradient(
+      circle at top left,
+      rgba(0, 0, 0, 0.55) 0%,
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at top right,
+      rgba(0, 0, 0, 0.25) 0%,
+      transparent 20%
+    ),
+    radial-gradient(
+      circle at bottom left,
+      rgba(0, 0, 0, 0.25) 0%,
+      transparent 20%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(0, 0, 0, 0.35) 0%,
+      transparent 30%
+    );
 
   display: flex;
   flex-direction: column;
@@ -31,7 +46,7 @@ $font_printwriter: "Special Elite", system-ui;
     background-size: cover;
     opacity: 0.1; // controla intensidad de la textura
     z-index: 0; // se queda detrás del contenido
-    pointer-events: none;  // No bloquea los eventos del link
+    pointer-events: none; // No bloquea los eventos del link
   }
   &__title {
     font-family: $font_handwriter;
@@ -42,8 +57,8 @@ $font_printwriter: "Special Elite", system-ui;
     z-index: 1;
     animation: moveTitle 1s ease-in-out infinite alternate;
   }
-  &__container--img{
-    position: relative;   // Para que funcione el z-index
+  &__container--img {
+    position: relative; // Para que funcione el z-index
     background-image: url("/images/newspapper.png");
     width: 400px;
     height: 200px;
@@ -51,26 +66,65 @@ $font_printwriter: "Special Elite", system-ui;
     background-size: contain;
     background-position: center;
     z-index: 10;
-    margin: 0 auto;
+    margin: 3rem auto;
+    animation: moveNewspapper 2s linear;
+    filter: drop-shadow(8px 8px 15px rgba(0, 0, 0, 0.9));
   }
   &__subtitle {
     font-family: $font_printwriter;
     font-size: 2rem;
-     z-index: 1;
+    z-index: 1;
+    animation: moveSubtitle 2s linear;
+  }
+  &__link {
+    text-decoration: none;
+    width: 15rem;
+    background-color: $color_prymary;
+    z-index: 1;
+    color: $color_ink;
+    border-radius: 5px;
+    border: 2px solid $color_ink;
+    padding: 1rem;
+    margin: 2rem auto;
+    font-family: $font_printwriter;
+    font-weight: 600;
+    font-size: 2rem;
+    box-shadow: 0 8px 20px rgba($color_ink, 0.6);
+
+    &:hover {
+      background-color: $color_backgorund;
+      color: $color_prymary;
+      border: 2px solid $color_prymary;
+    }
   }
 }
-.landing__link {
-  width: 100%;
-  color: black;
-  margin: 2rem;
-}
 
+// Animación título
 @keyframes moveTitle {
-
   from {
     transform: translateY(0);
   }
   to {
     transform: translateY(10px);
+  }
+}
+
+// Animación periodico
+@keyframes moveNewspapper {
+  from {
+    transform: rotate(-360deg) scale(0.2);
+  }
+  to {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+// Animación periodico
+@keyframes moveSubtitle {
+  from {
+    transform: scale(0.2);
+  }
+  to {
+    transform: scale(1);
   }
 }
