@@ -31,6 +31,7 @@ $font_printwriter: "Special Elite", system-ui;
     background-size: cover;
     opacity: 0.1; // controla intensidad de la textura
     z-index: 0; // se queda detrás del contenido
+    pointer-events: none;  // No bloquea los eventos del link
   }
   &__title {
     font-family: $font_handwriter;
@@ -58,7 +59,7 @@ $font_printwriter: "Special Elite", system-ui;
      z-index: 1;
   }
 }
-.landing__button {
+.landing__link {
   width: 100%;
   color: black;
   margin: 2rem;
