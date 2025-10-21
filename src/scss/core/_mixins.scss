@@ -1,0 +1,121 @@
+@use "../core/variables" as var;
+
+@mixin default() {
+  width: 80%;
+  background-color: var.$color_background;
+  box-shadow: 0 10px 20px rgba(var.$color_ink, 0.6);
+  border-radius: 5px;
+  padding: 4rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  grid-template-areas:
+    "info"
+    "title"
+    "subtitle"
+    "img"
+    "text";
+  @media (min-width: var.$tablet-bp) {
+    margin: auto;
+  }
+  &--info {
+    grid-area: info;
+    font-family: var.$font_printwriter;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-around;
+    &--number {
+      text-align: right;
+    }
+  }
+  &--title {
+    grid-area: title;
+    font-family: var.$font_handwriter;
+    padding-top: 2rem;
+    padding-bottom: 0.5rem;
+    font-size: 3rem;
+  }
+  &--subtitle {
+    grid-area: subtitle;
+    font-family: var.$font_handwriter;
+    font-size: 2rem;
+  }
+  &--containerImg {
+    grid-area: img;
+    width: 80%;
+    padding-block: 3rem;
+    &--img {
+      width: 100%;
+    }
+  }
+  &--text {
+    grid-area: text;
+    font-family: var.$font_printwriter;
+    text-align: justify;
+  }
+}
+
+@mixin sensationalist() {
+  position: relative;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "title img"
+    "title img"
+    "subtitle subtitle"
+    "text text"
+    "info info";
+  background-color: rgb(241, 241, 241);
+  background-image: radial-gradient(
+    circle at center,
+    rgba(255, 255, 255, 0.6) 20%,
+    rgba(255, 255, 255, 0.4) 40%,
+    rgba(0, 0, 0, 0.2) 100%
+  );
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0; // ocupa todo el contenedor
+    background-image: url("/images/background_sensacionalist.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.2; // controla la visibilidad
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  & .preview__article--info {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-top: 2rem;
+    z-index: 1;
+  }
+  & .preview__article--title {
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    padding-top: 0;
+    align-self: center; // Centra el elemento en sus celdas de grid
+    color: var.$color_primary;
+    z-index: 1;
+  }
+  & .preview__article--subtitle {
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    padding-bottom: 2rem;
+    color: #7a7a1c;
+    z-index: 1;
+  }
+  & .preview__article--containerImg {
+    padding-block: 0;
+    width: 100%;
+    padding-bottom: 2rem;
+    z-index: 1;
+  }
+
+  & .preview__article--text {
+    background-color: #ffff28;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    padding: 0.5rem;
+    z-index: 1;
+  }
+}
