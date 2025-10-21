@@ -1,40 +1,40 @@
+@use "../../core/variables" as *;
+
 .designOptions {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   background-image: linear-gradient(rgba(255, 255, 255, 0.8)),
-    url("images/paper-texture.jpg");
+    url("/images/paper-texture.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   height: 100vh;
 }
 
-.titleDesign {
-  align-self: center;
-  padding-bottom: 2rem;
-  text-transform: uppercase;
-  font-size: 1rem;
-}
-
 .form-section {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: flex-start;
-  gap: 1rem;
-  padding-right: 1rem;
+  gap: 3rem;
+  margin: 0 auto;
 }
 
-.subtitleDesign {
+/*.hidden {
+  display: none;
+}*/
+
+.titleDesign {
   flex-shrink: 0;
-  gap: 3rem;
   margin: 0;
-  padding-top: 0;
+  padding-top: 2rem;
   padding-left: 1rem;
+  font-family: $font_printwriter;
   text-transform: uppercase;
-  font-size: 0.8rem;
-  width: 5rem;
+  font-size: 1.5rem;
+  width: auto;
+  cursor: pointer;
 }
 
 .formContainer {
@@ -59,8 +59,9 @@ label {
 
 .option-title {
   font-weight: bold;
-  font-size: 0.7rem;
+  font-size: 1rem;
   padding-left: 0.5rem;
+  font-family: $font_printwriter;
 }
 
 .magazineColors {
@@ -69,13 +70,19 @@ label {
 
 .magazineColor1,
 .magazineColor2,
-.magazineColor3 {
-  width: 1rem;
-  height: 0.7rem;
+.magazineColor3,
+.economyColor1,
+.economyColor2,
+.economyColor3,
+.newspaperColor1,
+.newspaperColor2,
+.newspaperColor3 {
+  width: 1.2rem;
+  height: 1.2rem;
 }
 
 .magazineColor1 {
-  background-color: #ff1493;
+  background-color: pink;
 }
 
 .magazineColor2 {
@@ -90,13 +97,6 @@ label {
   display: flex;
 }
 
-.economyColor1,
-.economyColor2,
-.economyColor3 {
-  width: 1rem;
-  height: 0.7rem;
-}
-
 .economyColor1 {
   background-color: salmon;
 }
@@ -106,28 +106,48 @@ label {
 }
 
 .economyColor3 {
-  background-color: grey;
+  background-color: $color_grey;
 }
 
 .newspaperColors {
   display: flex;
 }
 
-.newspaperColor1,
-.newspaperColor2,
-.newspaperColor3 {
-  width: 1rem;
-  height: 0.7rem;
-}
-
 .newspaperColor1 {
-  background-color: rgb(240, 231, 230);
+  background-color: rgb(236, 224, 224);
 }
 
 .newspaperColor2 {
-  background-color: rgb(14, 79, 129);
+  background-color: $color_secondary;
 }
 
 .newspaperColor3 {
-  background-color: grey;
+  background-color: $color_grey;
+}
+
+@media (min-width: 768px) {
+  .titleDesign {
+    font-size: 3rem;
+  }
+
+  .option-title {
+    font-size: 2rem;
+  }
+
+  .form-section {
+    padding: 2rem;
+  }
+
+  .magazineColor1,
+  .magazineColor2,
+  .magazineColor3,
+  .economyColor1,
+  .economyColor2,
+  .economyColor3,
+  .newspaperColor1,
+  .newspaperColor2,
+  .newspaperColor3 {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
 }
