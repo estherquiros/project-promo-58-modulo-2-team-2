@@ -1,6 +1,10 @@
 @use "../../core/variables" as vars;
 
 .share {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+
   &-form {
     display: flex;
     flex-direction: column;
@@ -28,6 +32,9 @@
   &-button-icon {
     height: 20px;
   }
+  &-nodes-icon {
+    height: 15px;
+  }
   &-card {
     display: flex;
     flex-direction: column;
@@ -35,5 +42,15 @@
     border-top: 1px solid vars.$color_grey;
     border-bottom: 1px solid vars.$color_grey;
     width: 100%;
+    align-items: center;
+    padding: 20px;
+  }
+  &-twitter-button {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 200px;
+    height: 40px;
+    align-items: center;
   }
 }
