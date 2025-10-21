@@ -1,4 +1,4 @@
-@use "/scss/core/_variables.scss" as *;
+@use "../../core/variables" as *;
 
 .designOptions {
   display: flex;
@@ -16,12 +16,16 @@
 .form-section {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;  
+  align-items: flex-start;
   gap: 3rem;
-  margin-left: 1rem;
+  margin: 0 auto;
 }
 
-.subtitleDesign {
+/*.hidden {
+  display: none;
+}*/
+
+.titleDesign {
   flex-shrink: 0;
   margin: 0;
   padding-top: 2rem;
@@ -30,6 +34,7 @@
   text-transform: uppercase;
   font-size: 1.5rem;
   width: auto;
+  cursor: pointer;
 }
 
 .formContainer {
@@ -77,7 +82,7 @@ label {
 }
 
 .magazineColor1 {
-  background-color: #ff1493;
+  background-color: pink;
 }
 
 .magazineColor2 {
@@ -101,7 +106,7 @@ label {
 }
 
 .economyColor3 {
-  background-color: grey;
+  background-color: $color_grey;
 }
 
 .newspaperColors {
@@ -109,7 +114,7 @@ label {
 }
 
 .newspaperColor1 {
-  background-color: $color_background;
+  background-color: rgb(236, 224, 224);
 }
 
 .newspaperColor2 {
@@ -121,8 +126,28 @@ label {
 }
 
 @media (min-width: 768px) {
-  .designOptions {  
-  flex-direction: column;
+  .titleDesign {
+    font-size: 3rem;
+  }
 
-}
+  .option-title {
+    font-size: 2rem;
+  }
+
+  .form-section {
+    padding: 2rem;
+  }
+
+  .magazineColor1,
+  .magazineColor2,
+  .magazineColor3,
+  .economyColor1,
+  .economyColor2,
+  .economyColor3,
+  .newspaperColor1,
+  .newspaperColor2,
+  .newspaperColor3 {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
 }

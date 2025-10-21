@@ -1,0 +1,17 @@
+@use "../core/variables" as var;
+
+.form-main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "header"
+    "preview"
+    "form-content"
+    "footer";
+  @media (min-width: var.$tablet-bp) {
+    grid-template-areas:
+    "header header"
+    "form-content preview"
+    "footer footer";
+  }
+}
