@@ -1,26 +1,36 @@
-$color_backgorund: #f7f4ef;
-$color_ink: #2b2b2b;
-$color_grey: #838383;
-$color_prymary: #d64545;
-$font_handwriter: "Old Standard TT", serif;
-$font_printwriter: "Special Elite", system-ui;
+@use "../core/variables" as var;
 
 .landing {
   position: relative;
-  background-color: $color_backgorund;
-   background-image:
-   /* Degradado del centro hacia afuera*/
-    radial-gradient(circle at top left, rgba(0, 0, 0, 0.55) 0%, transparent 40%),
-    radial-gradient(circle at top right, rgba(0, 0, 0, 0.25) 0%, transparent 20%),
-    radial-gradient(circle at bottom left, rgba(0, 0, 0, 0.25) 0%, transparent 20%),
-    radial-gradient(circle at bottom right, rgba(0, 0, 0, 0.35) 0%, transparent 30%);
+  background-color: var.$color_backgorund;
+  background-image:
+   /* Degradado del centro hacia afuera*/ radial-gradient(
+      circle at top left,
+      rgba(0, 0, 0, 0.45) 0%,
+      transparent 20%
+    ),
+    radial-gradient(
+      circle at top right,
+      rgba(0, 0, 0, 0.25) 0%,
+      transparent 20%
+    ),
+    radial-gradient(
+      circle at bottom left,
+      rgba(0, 0, 0, 0.25) 0%,
+      transparent 20%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(0, 0, 0, 0.35) 0%,
+      transparent 30%
+    );
 
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 2rem;
   justify-content: center;
-  text-align: center;
-  padding-block: 100px;
+  align-items: center;
+  padding-block: 8rem;
 
   &:before {
     content: "";
@@ -31,46 +41,162 @@ $font_printwriter: "Special Elite", system-ui;
     background-size: cover;
     opacity: 0.1; // controla intensidad de la textura
     z-index: 0; // se queda detrás del contenido
-    pointer-events: none;  // No bloquea los eventos del link
+    pointer-events: none; // No bloquea los eventos del link
+  }
+  &__brand {
+    font-size: 6rem;
+    font-family: var.$font_printwriter;
+    color: var.$color_secondary;
+    z-index: 1;
+    text-align: center;
+    @media (min-width: var.$tablet-bp) {
+      font-size: 8rem;
+    }
   }
   &__title {
-    font-family: $font_handwriter;
-    color: $color_prymary;
-    -webkit-text-stroke: 1px $color_ink; // grosor + color del borde
+    font-family: var.$font_handwriter;
+    color: var.$color_primary;
+    -webkit-text-stroke: 1px var.$color_ink; // grosor + color del borde
     text-shadow: 4px 10px 5px rgba(0, 0, 0, 0.25);
-    font-size: 8rem;
+    font-size: 4rem;
+    text-align: center;
     z-index: 1;
     animation: moveTitle 1s ease-in-out infinite alternate;
+    @media (min-width: var.$tablet-bp) {
+      font-size: 6rem;
+    }
   }
-  &__container--img{
-    position: relative;   // Para que funcione el z-index
+  &__container--img {
+    position: relative; // Para que funcione el z-index
     background-image: url("/images/newspapper.png");
-    width: 400px;
+    width: 300px;
     height: 200px;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    z-index: 10;
-    margin: 0 auto;
+    z-index: 1;
+    margin: 3rem auto;
+    animation: moveNewspapper 2s linear;
+    filter: drop-shadow(8px 8px 15px rgba(0, 0, 0, 0.9));
+    @media (min-width: var.$tablet-bp) {
+      width: 400px;
+      height: 300px;
+    }
   }
   &__subtitle {
-    font-family: $font_printwriter;
+    font-family: var.$font_printwriter;
     font-size: 2rem;
-     z-index: 1;
+    text-align: center;
+    padding: 2rem;
+    z-index: 1;
+    animation: moveSubtitle 2s linear;
+    @media (min-width: var.$tablet-bp) {
+      font-size: 3rem;
+    }
+  }
+  &__begin {
+    width: 50%;
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    gap: 1rem;
+    @media (min-width: var.$tablet-bp) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      margin-block: 4rem;
+      width: 80%;
+    }
+    &--article {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 2rem;
+      background-color: var.$color_primary;
+      color: var.$color_backgorund;
+      font-family: var.$font_handwriter;
+      box-shadow: 0 18px 40px rgba(var.$color_ink, 0.8);
+      border-radius: 5px;
+      padding: 2rem;
+      @media (min-width: var.$tablet-bp) {
+        flex-direction: row;
+        align-items: center;
+        gap: 2rem;
+        font-size: 3rem;
+        justify-content: space-between;
+      }
+    }
+    &--arrowDown {
+      font-size: 2rem;
+      @media (min-width: var.$tablet-bp) {
+        display: none;
+      }
+    }
+    &--arrowRight {
+      display: none;
+      @media (min-width: var.$tablet-bp) {
+        display: inline-block;
+        font-size: 3rem;
+      }
+    }
+  }
+  &__link {
+    text-decoration: none;
+    text-align: center;
+    width: 25rem;
+    background-color: var.$color_backgorund;
+    z-index: 1;
+    color: var.$color_secondary;
+    border-radius: 5px;
+    border: 2px solid var.$color_secondary;
+    padding: 1rem;
+    margin: 2rem auto;
+    font-family: var.$font_printwriter;
+    font-weight: 600;
+    font-size: 2rem;
+    box-shadow: 0 8px 20px rgba(var.$color_ink, 0.6);
+    transition: transform 0.4s ease; // Para suavizar el movimiento en el hover
+    &:hover {
+      color: var.$color_primary;
+      border: 2px solid var.$color_primary;
+      transform: translateY(-5px); // Moverlo para arriba al hacer hover
+    }
+    @media (min-width: var.$tablet-bp) {
+      width: 35rem;
+      font-size: 3rem;
+      padding-block: 1.5rem;
+    }
   }
 }
-.landing__link {
-  width: 100%;
-  color: black;
-  margin: 2rem;
-}
 
+// Animación título
 @keyframes moveTitle {
-
   from {
     transform: translateY(0);
   }
   to {
     transform: translateY(10px);
+  }
+}
+
+// Animación periodico
+@keyframes moveNewspapper {
+  from {
+    transform: rotate(-360deg) scale(0.2);
+  }
+  to {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+// Animación subtitulo
+@keyframes moveSubtitle {
+  from {
+    transform: scale(0.2);
+  }
+  to {
+    transform: scale(1);
   }
 }
