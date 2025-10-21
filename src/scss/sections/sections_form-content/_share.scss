@@ -28,6 +28,17 @@
     display: flex;
     justify-content: end;
     align-items: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
   }
 
   &-button-icon {
@@ -59,6 +70,18 @@
     font-family: vars.$font_handwriter;
     border: none;
     border-radius: 5px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      background-color: darken(vars.$color_primary, 10%);
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
   }
 
   &-twitter-icon {
