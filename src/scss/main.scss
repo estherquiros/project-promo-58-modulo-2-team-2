@@ -3,6 +3,7 @@
 @use './core/variables';
 
 // Layout
+@use './layout/header';
 @use './layout/footer';
 @use './layout/landing';
 @use './layout/form';

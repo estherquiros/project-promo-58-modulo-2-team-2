@@ -1,0 +1,11 @@
+@use "../core/variables" as var;
+
+.header{
+  background-color: var.$color_background;
+  height: 100dvw;
+}
+.header-title{
+  font-family: var.$font_printwriter;
+  color: var.$color_secondary;
+  font-size: 1.5rem;
+}

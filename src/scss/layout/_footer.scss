@@ -1,0 +1,18 @@
+@use "../core/variables" as var;
+
+
+
+.footer{
+  background-color: var.$color_background;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+.footer-text{
+  color: var.$color_primary;
+  font-family: var.$font_printwriter;
+  font-size: 2rem;
+  padding: 3rem;
+  border-top: 1rem solid var.$color_secondary;
+}
