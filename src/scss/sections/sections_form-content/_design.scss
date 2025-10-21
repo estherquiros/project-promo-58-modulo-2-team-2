@@ -1,40 +1,35 @@
+@use "/scss/core/_variables.scss" as *;
+
 .designOptions {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   background-image: linear-gradient(rgba(255, 255, 255, 0.8)),
-    url("images/paper-texture.jpg");
+    url("/images/paper-texture.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   height: 100vh;
 }
 
-.titleDesign {
-  align-self: center;
-  padding-bottom: 2rem;
-  text-transform: uppercase;
-  font-size: 1rem;
-}
-
 .form-section {
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  gap: 1rem;
-  padding-right: 1rem;
+  flex-direction: column;
+  align-items: flex-start;  
+  gap: 3rem;
+  margin-left: 1rem;
 }
 
 .subtitleDesign {
   flex-shrink: 0;
-  gap: 3rem;
   margin: 0;
-  padding-top: 0;
+  padding-top: 2rem;
   padding-left: 1rem;
+  font-family: $font_printwriter;
   text-transform: uppercase;
-  font-size: 0.8rem;
-  width: 5rem;
+  font-size: 1.5rem;
+  width: auto;
 }
 
 .formContainer {
@@ -59,8 +54,9 @@ label {
 
 .option-title {
   font-weight: bold;
-  font-size: 0.7rem;
+  font-size: 1rem;
   padding-left: 0.5rem;
+  font-family: $font_printwriter;
 }
 
 .magazineColors {
@@ -69,9 +65,15 @@ label {
 
 .magazineColor1,
 .magazineColor2,
-.magazineColor3 {
-  width: 1rem;
-  height: 0.7rem;
+.magazineColor3,
+.economyColor1,
+.economyColor2,
+.economyColor3,
+.newspaperColor1,
+.newspaperColor2,
+.newspaperColor3 {
+  width: 1.2rem;
+  height: 1.2rem;
 }
 
 .magazineColor1 {
@@ -90,13 +92,6 @@ label {
   display: flex;
 }
 
-.economyColor1,
-.economyColor2,
-.economyColor3 {
-  width: 1rem;
-  height: 0.7rem;
-}
-
 .economyColor1 {
   background-color: salmon;
 }
@@ -113,21 +108,21 @@ label {
   display: flex;
 }
 
-.newspaperColor1,
-.newspaperColor2,
-.newspaperColor3 {
-  width: 1rem;
-  height: 0.7rem;
-}
-
 .newspaperColor1 {
-  background-color: rgb(240, 231, 230);
+  background-color: $color_background;
 }
 
 .newspaperColor2 {
-  background-color: rgb(14, 79, 129);
+  background-color: $color_secondary;
 }
 
 .newspaperColor3 {
-  background-color: grey;
+  background-color: $color_grey;
+}
+
+@media (min-width: 768px) {
+  .designOptions {  
+  flex-direction: column;
+
+}
 }
