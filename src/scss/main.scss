@@ -1,16 +1,15 @@
 // Core
-@use './core/reset';
+@use "./core/reset";
 
 // Layout
-@use './layout/header';
-@use './layout/footer';
-@use './layout/landing';
-@use './layout/form-page';
-
+@use "./layout/header";
+@use "./layout/footer";
+@use "./layout/landing";
+@use "./layout/form-page";
 
 // Sections
-@use './sections/form-content';
-@use './sections/preview';
-@use './sections/sections_form-content/design';
-@use './sections/sections_form-content/fill';
-@use './sections/sections_form-content/share';
+@use "./sections/form-content";
+@use "./sections/preview";
+@use "./sections/sections_form-content/design";
+@use "./sections/sections_form-content/fill";
+@use "./sections/sections_form-content/share";
