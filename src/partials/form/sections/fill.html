@@ -1,2 +1,63 @@
 
-    <h1>seccion del formulario para los datos</h1>
+<section class="fillOptions">
+    <h1 class="titleFill">¡Crea la portada del día!</h1>
+  <div class="section-fill">
+  <form class="form-section-fill">
+    <div class="newsHeadlineFill">
+    <label for="newsHeadline">Título de la Nota</label>
+    <input
+      placeholder="Escribe aquígit..."
+      id="newsHeadline"
+      type="text"
+      name="newsHeadline"
+    />
+    </div>
+    <div class="newsSubtitleFill">
+    <label for="newsSubtitle">Subtítulo de la Nota</label>
+    <input
+      placeholder="Escribe aquí..."
+      id="newsSubtitle"
+      type="text"
+      name="newsSubtitle"
+    />
+    </div>
+    <div class="imageContainer">
+        <input 
+            type="file" 
+            id="addImage" 
+            name="newsImage" 
+            accept="image/*"
+            required
+            style="display: none;">
+        <label for="addImage" class="buttonAddImage">
+            Añadir imagen 📸
+        </label>
+        <p>Solo archivos PNG, JPG, JPEG.</p>
+    </div>
+    <div class="publicationDateFill">
+        <label for="publicationDate">Fecha de publicación:</label>
+        <input  
+         type="date" 
+         id="publicationDate" 
+         name="publicationDate" 
+         required
+        />
+    </div>
+    <div class="publicationNumberFill">
+    <label for="publicationNumber">Número de la publicación:</label>
+    <select id="publicationNumber" name="publicationNumber">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+    </select>
+    </div>
+    </form>
+
+
+   
