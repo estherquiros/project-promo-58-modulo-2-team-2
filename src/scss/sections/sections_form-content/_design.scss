@@ -1,0 +1,133 @@
+.designOptions {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.8)),
+    url("images/paper-texture.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+}
+
+.titleDesign {
+  align-self: center;
+  padding-bottom: 2rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+.form-section {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1rem;
+  padding-right: 1rem;
+}
+
+.subtitleDesign {
+  flex-shrink: 0;
+  gap: 3rem;
+  margin: 0;
+  padding-top: 0;
+  padding-left: 1rem;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  width: 5rem;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  cursor: pointer;
+}
+
+.option-content {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.option-title {
+  font-weight: bold;
+  font-size: 0.7rem;
+  padding-left: 0.5rem;
+}
+
+.magazineColors {
+  display: flex;
+}
+
+.magazineColor1,
+.magazineColor2,
+.magazineColor3 {
+  width: 1rem;
+  height: 0.7rem;
+}
+
+.magazineColor1 {
+  background-color: #ff1493;
+}
+
+.magazineColor2 {
+  background-color: #ffd700;
+}
+
+.magazineColor3 {
+  background-color: #ff69b4;
+}
+
+.economyColors {
+  display: flex;
+}
+
+.economyColor1,
+.economyColor2,
+.economyColor3 {
+  width: 1rem;
+  height: 0.7rem;
+}
+
+.economyColor1 {
+  background-color: salmon;
+}
+
+.economyColor2 {
+  background-color: orange;
+}
+
+.economyColor3 {
+  background-color: grey;
+}
+
+.newspaperColors {
+  display: flex;
+}
+
+.newspaperColor1,
+.newspaperColor2,
+.newspaperColor3 {
+  width: 1rem;
+  height: 0.7rem;
+}
+
+.newspaperColor1 {
+  background-color: rgb(240, 231, 230);
+}
+
+.newspaperColor2 {
+  background-color: rgb(14, 79, 129);
+}
+
+.newspaperColor3 {
+  background-color: grey;
+}
