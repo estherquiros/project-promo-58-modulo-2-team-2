@@ -1,5 +1,8 @@
 @use "../../core/variables" as vars;
 
+.separator {
+  border: 0.3rem solid vars.$color_secondary;
+}
 .share {
   display: flex;
   gap: 10px;
@@ -105,5 +108,8 @@
   }
   .share-twitter-title {
     font-size: 2rem;
+  }
+  .share-nodes-icon {
+    height: 25px;
   }
 }
