@@ -4,7 +4,11 @@
   display: flex;
   gap: 10px;
   align-items: center;
-  font-family: vars.$font_handwriter;
+  font-family: vars.$font_printwriter;
+
+  &-title {
+    font-size: 1.5rem;
+  }
 
   &-form {
     display: flex;
@@ -21,7 +25,7 @@
     font-size: 1rem;
     background-color: vars.$color_secondary;
     color: vars.$color_background;
-    font-family: vars.$font_handwriter;
+    font-family: vars.$font_printwriter;
     border-radius: 5px;
     border: none;
     padding: 1.5rem;
@@ -60,14 +64,14 @@
   &-twitter-button {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 5px;
     width: 200px;
     height: 40px;
     align-items: center;
     font-size: 1.5rem;
     background-color: vars.$color_primary;
     color: vars.$color_background;
-    font-family: vars.$font_handwriter;
+    font-family: vars.$font_printwriter;
     border: none;
     border-radius: 5px;
     transition: all 0.3s ease;
@@ -87,8 +91,19 @@
   &-twitter-icon {
     height: 20px;
   }
+  &-twiter-title {
+    font-size: 1.5rem;
+  }
 }
-
 .collapsed {
   display: none;
+}
+
+@media (min-width: 768px) {
+  .share-title {
+    font-size: 3rem;
+  }
+  .share-twitter-title {
+    font-size: 2rem;
+  }
 }
