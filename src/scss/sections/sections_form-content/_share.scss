@@ -1,5 +1,8 @@
 @use "../../core/variables" as vars;
 
+.separator {
+  border: 0.3rem solid vars.$color_secondary;
+}
 .share {
   display: flex;
   gap: 10px;

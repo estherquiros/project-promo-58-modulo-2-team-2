@@ -1,1 +1,5 @@
-@use '/scss/core/_variables.scss' as *;
+@use "/scss/core/_variables.scss" as vars;
+
+.separator {
+  border: 0.3rem solid vars.$color_secondary;
+}

@@ -3,4 +3,7 @@
 .form-content {
   grid-area: form-content;
   background-color: vars.$color_beige;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
