@@ -5,12 +5,10 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.8)),
-    url("/images/paper-texture.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  height: 100vh;
+  padding-bottom: 1.5rem;   
 }
 
 .form-section {
@@ -19,6 +17,7 @@
   align-items: flex-start;
   gap: 3rem;
   margin: 0 auto;
+  
 }
 
 /*.hidden {
@@ -29,7 +28,6 @@
   flex-shrink: 0;
   margin: 0;
   padding-top: 2rem;
-  padding-left: 1rem;
   font-family: $font_printwriter;
   text-transform: uppercase;
   font-size: 1.5rem;
@@ -37,11 +35,17 @@
   cursor: pointer;
 }
 
+.icon-design {
+  margin-right: 1rem;
+  color: #d64545;
+}
+
 .formContainer {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 1rem;
+  padding-bottom: 2rem;
 }
 
 label {
@@ -59,7 +63,7 @@ label {
 
 .option-title {
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 1.5rem;
   padding-left: 0.5rem;
   font-family: $font_printwriter;
 }
