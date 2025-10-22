@@ -1,121 +1,191 @@
 @use "../core/variables" as var;
 
+@mixin base-gradient() {
+  background-image: radial-gradient(circle, red, blue);
+}
+
 @mixin default() {
   width: 80%;
   background-color: var.$color_background;
   box-shadow: 0 10px 20px rgba(var.$color_ink, 0.6);
   border-radius: 5px;
-  padding: 4rem;
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-items: center;
-  grid-template-areas:
-    "info"
-    "title"
-    "subtitle"
-    "img"
-    "text";
+  padding: 3rem;
   @media (min-width: var.$tablet-bp) {
+    width: 50%;
     margin: auto;
   }
-  &--info {
-    grid-area: info;
-    font-family: var.$font_printwriter;
-    width: 100%;
+  &--div {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-content: space-around;
-    &--number {
-      text-align: right;
-    }
-  }
-  &--title {
-    grid-area: title;
-    font-family: var.$font_handwriter;
-    padding-top: 2rem;
-    padding-bottom: 0.5rem;
-    font-size: 3rem;
-  }
-  &--subtitle {
-    grid-area: subtitle;
-    font-family: var.$font_handwriter;
-    font-size: 2rem;
-  }
-  &--containerImg {
-    grid-area: img;
-    width: 80%;
-    padding-block: 3rem;
-    &--img {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    grid-template-areas:
+      "info"
+      "title"
+      "subtitle"
+      "img"
+      "text";
+    background-color: #d6d6d6;
+    padding: 2rem;
+    &--info {
+      grid-area: info;
+      font-family: var.$font_printwriter;
       width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      justify-content: space-around;
+      &--number {
+        text-align: right;
+      }
     }
-  }
-  &--text {
-    grid-area: text;
-    font-family: var.$font_printwriter;
-    text-align: justify;
+    &--title {
+      grid-area: title;
+      font-family: var.$font_handwriter;
+      padding-top: 2rem;
+      padding-bottom: 0.5rem;
+      font-size: 3rem;
+      text-align: center;
+    }
+    &--subtitle {
+      grid-area: subtitle;
+      font-family: var.$font_handwriter;
+      font-size: 2rem;
+      text-align: center;
+    }
+    &--containerImg {
+      grid-area: img;
+      width: 15rem;
+      margin: 3rem auto;
+      padding-block: 6rem;
+      background-image: url("/images/newspapper.png");
+      background-repeat: no repeat;
+      background-size: cover;
+      background-position: center;
+    }
+    &--text {
+      grid-area: text;
+      font-family: var.$font_printwriter;
+      text-align: justify;
+    }
   }
 }
 
 @mixin sensationalist() {
-  position: relative;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas:
-    "title img"
-    "title img"
-    "subtitle subtitle"
-    "text text"
-    "info info";
-  background-color: rgb(241, 241, 241);
-  background-image: radial-gradient(
-    circle at center,
-    rgba(255, 255, 255, 0.6) 20%,
-    rgba(255, 255, 255, 0.4) 40%,
-    rgba(0, 0, 0, 0.2) 100%
-  );
+  background-image: url("/images/background_sensacionalist.png");
 
-  &::before {
-    content: "";
-    position: absolute;
-    inset: 0; // ocupa todo el contenedor
-    background-image: url("/images/background_sensacionalist.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    opacity: 0.2; // controla la visibilidad
-    z-index: 0;
-    pointer-events: none;
+  & .preview__article--div {
+    border-radius: 2px;
+    // box-shadow: 0 10px 20px rgba(var.$color_ink, 0.3);
+    background-color: #f3f3f3;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "info title"
+      "img img"
+      "subtitle text"
+      ;
   }
 
-  & .preview__article--info {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    padding-top: 2rem;
+  & .preview__article--div--info {
+    grid-template-columns: 1fr;
+    font-family: var.$font_sensacionalist;
     z-index: 1;
   }
-  & .preview__article--title {
-    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  & .preview__article--div--info--number {
+    text-align: left;
+  }
+  & .preview__article--div--title {
+    font-family: var.$font_sensacionalist;
+    font-weight: 700;
+    font-style: italic;
     padding-top: 0;
-    align-self: center; // Centra el elemento en sus celdas de grid
-    color: var.$color_primary;
+    color: #7e1cff;
     z-index: 1;
   }
-  & .preview__article--subtitle {
-    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  & .preview__article--div--subtitle {
+    font-family: var.$font_sensacionalist;
     padding-bottom: 2rem;
-    color: #7a7a1c;
+    color: #ff9a47;
     z-index: 1;
+    align-self: center;
   }
-  & .preview__article--containerImg {
-    padding-block: 0;
-    width: 100%;
-    padding-bottom: 2rem;
+  & .preview__article--div--containerImg {
+    width: 20rem;
+    height: auto;
     z-index: 1;
+    background-image: url("/images/img_preview_sensacionalist.png");
   }
 
-  & .preview__article--text {
-    background-color: #ffff28;
-    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  & .preview__article--div--text {
+    background-color: #ff9a47;
+    font-family: var.$font_sensacionalist;
     padding: 0.5rem;
     z-index: 1;
   }
+}
+
+
+@mixin economist(){
+  background-image: url("/images/background_economy.png");
+  & .preview__article--div {
+    background-color: #fcd9b8;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "info info"
+      "title title"
+      "img subtitle"
+      "img text"
+      ;
+    gap: 1rem;
+  }
+
+  & .preview__article--div--info {
+    grid-template-columns: 1fr 1fr;
+    font-family: var.$font_economist;
+    z-index: 1;
+  }
+  & .preview__article--div--info--number {
+    text-align: right;
+  }
+  & .preview__article--div--title {
+    padding-top: 1rem;
+    font-family: var.$font_economist;
+    font-weight: 700;
+    padding-top: 0;
+    color: var.$color_ink;
+    z-index: 1;
+  }
+  & .preview__article--div--subtitle {
+    font-family: var.$font_economist;
+    color: var.$color_ink;
+    z-index: 1;
+  }
+  & .preview__article--div--containerImg {
+    width: 10rem;
+    height: auto;
+    z-index: 1;
+    background-image: url("/images/img_preview_economy.png");
+  }
+
+  & .preview__article--div--text {
+    font-family: var.$font_economist;
+    padding: 0.5rem;
+    z-index: 1;
+  }
+}
+@mixin generalist(){
+  background-image: url("/images/background_generalist.png");
+  & .preview__article--div {
+    background-color: #e7e7e7;
+  }
+  & .preview__article--div--info {
+    color:var.$color_secondary;
+  }
+  & .preview__article--div--title {
+    color: var.$color_primary;
+  }
+
+  & .preview__article--div--containerImg {
+    background-image: url("/images/img_preview_generalist.png");
+  }
+
+
 }

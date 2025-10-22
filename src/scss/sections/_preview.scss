@@ -14,5 +14,11 @@
    &.type-sensacionalist{
     @include mix.sensationalist();
    }
+   &.type-economist{
+    @include mix.economist();
+   }
+   &.type-generalist{
+    @include mix.generalist();
+   }
   }
 }
