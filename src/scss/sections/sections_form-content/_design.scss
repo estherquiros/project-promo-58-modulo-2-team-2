@@ -8,7 +8,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  padding-bottom: 1.5rem;   
+  padding-bottom: 1.5rem;
 }
 
 .form-section {
@@ -17,7 +17,6 @@
   align-items: flex-start;
   gap: 3rem;
   margin: 0 auto;
-  
 }
 
 /*.hidden {
@@ -68,7 +67,9 @@ label {
   font-family: $font_printwriter;
 }
 
-.magazineColors {
+.magazineColors,
+.economyColors,
+.newspaperColors {
   display: flex;
 }
 
@@ -85,48 +86,46 @@ label {
   height: 1.2rem;
 }
 
-.magazineColor1 {
-  background-color: pink;
+.magazineColor {
+  &1 {
+    background-color: pink;
+  }
+
+  &2 {
+    background-color: #ffd700;
+  }
+
+  &3 {
+    background-color: #ff69b4;
+  }
 }
 
-.magazineColor2 {
-  background-color: #ffd700;
+.economyColor {
+  &1 {
+    background-color: salmon;
+  }
+
+  &2 {
+    background-color: orange;
+  }
+
+  &3 {
+    background-color: $color_grey;
+  }
 }
 
-.magazineColor3 {
-  background-color: #ff69b4;
-}
+.newspaperColor {
+  &1 {
+    background-color: rgb(236, 224, 224);
+  }
 
-.economyColors {
-  display: flex;
-}
+  &2 {
+    background-color: $color_secondary;
+  }
 
-.economyColor1 {
-  background-color: salmon;
-}
-
-.economyColor2 {
-  background-color: orange;
-}
-
-.economyColor3 {
-  background-color: $color_grey;
-}
-
-.newspaperColors {
-  display: flex;
-}
-
-.newspaperColor1 {
-  background-color: rgb(236, 224, 224);
-}
-
-.newspaperColor2 {
-  background-color: $color_secondary;
-}
-
-.newspaperColor3 {
-  background-color: $color_grey;
+  &3 {
+    background-color: $color_grey;
+  }
 }
 
 @media (min-width: 768px) {
