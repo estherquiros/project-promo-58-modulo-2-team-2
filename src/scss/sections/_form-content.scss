@@ -1,3 +1,6 @@
-.form-content{
+@use "../core/variables" as vars;
+
+.form-content {
   grid-area: form-content;
+  background-color: vars.$color_beige;
 }
