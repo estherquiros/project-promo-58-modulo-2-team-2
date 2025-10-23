@@ -2,36 +2,38 @@
 
 .designOptions {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  flex-direction: column;   
   padding-bottom: 1.5rem;
 }
 
-.form-section {
+.design-form-section {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 3rem;
-  margin: 0 auto;
+  align-items: flex-start;  
+  margin-left: 1.25rem;  
 }
 
-/*.hidden {
+.collapsed {
   display: none;
-}*/
+}
 
 .titleDesign {
-  flex-shrink: 0;
-  margin: 0;
+  flex-shrink: 0;  
   padding-top: 2rem;
+  padding-bottom: 2rem;
   font-family: $font_printwriter;
   text-transform: uppercase;
-  font-size: 1.5rem;
-  width: auto;
+  font-size: 2rem;     
   cursor: pointer;
+}
+
+.designButton {
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  text-transform: inherit;  
+  cursor: pointer;  
 }
 
 .icon-design {
@@ -43,8 +45,8 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 1rem;
-  padding-bottom: 2rem;
+  gap: 1rem;  
+  margin-left: 1.25rem;  
 }
 
 label {
@@ -56,21 +58,22 @@ label {
 
 .option-content {
   display: flex;
-  flex-direction: row;
-  gap: 1rem;
+  flex-direction: row;    
 }
 
 .option-title {
   font-weight: bold;
   font-size: 1.5rem;
-  padding-left: 0.5rem;
+  padding-left: 0.5rem;  
   font-family: $font_printwriter;
+  width: 18rem;
+  flex-shrink: 0;
 }
 
 .magazineColors,
 .economyColors,
 .newspaperColors {
-  display: flex;
+  display: flex;  
 }
 
 .magazineColor1,
@@ -81,9 +84,9 @@ label {
 .economyColor3,
 .newspaperColor1,
 .newspaperColor2,
-.newspaperColor3 {
+.newspaperColor3 {  
   width: 1.2rem;
-  height: 1.2rem;
+  height: 1.2rem; 
 }
 
 .magazineColor {
@@ -131,10 +134,13 @@ label {
 @media (min-width: 768px) {
   .titleDesign {
     font-size: 3rem;
+    padding-top: 3rem;
   }
 
   .option-title {
-    font-size: 2rem;
+    font-size: 2rem; 
+    padding-left: 1rem;     
+    width: 25rem;
   }
 
   .form-section {

@@ -1,5 +1,9 @@
 "use strict";
 
+console.log(">> Ready :)");
+
+import "./partials/form/sections/design.js";
+
 const magazineDesign = document.querySelector("#magazineDesign");
 const economyDesign = document.querySelector("#economyDesign");
 const newspaperDesign = document.querySelector("#newspaperDesign")

@@ -7,17 +7,23 @@
 .fillOptions {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  padding: 1.25rem;
+  justify-content: center;
+  align-items: center;
   font-family: "Special Elite", system-ui;
+  margin: 0 auto;
+  padding: 1.25rem 1.25rem;
 }
 
 .titleFill {
-  align-self: center;
+  align-items: center;
   padding-bottom: 2rem;
   text-transform: uppercase;
-  font-size: 1rem;
+  font-size: 1.5rem;
+}
+
+.icon-design-fil {
+  margin-right: 1rem;
+  color: #d64545;
 }
 
 .newsHeadline {
@@ -26,12 +32,34 @@
   padding-bottom: 0.5rem;
 } 
 
+.newsHeadline,
 .newsSubtitle,
 .newsDescription,
 .filePhoto,
 .publicationNumber,
 .publicationDate {
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 1.5rem;
     padding: 1rem 0rem 0.5rem 0rem;
+    align-items: center
+}
+
+
+@media (min-width: 768px) {
+  .titleFill {
+    font-size: 3rem;
+  }
+
+.newsHeadline,
+.newsSubtitle,
+.newsDescription,
+.filePhoto,
+.publicationNumber,
+.publicationDate {
+    font-size: 2rem;
+  }
+
+  .form-section-fill {
+    padding: 2rem;
+  }
 }
