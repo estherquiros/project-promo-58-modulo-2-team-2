@@ -2,12 +2,14 @@
 @use "../core/mixins" as mix;
 
 .preview {
+  width: 100%;
   background-color: var.$color_background;
   grid-area: preview;
   padding-block: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  
 
   &__article {
    @include mix.default();

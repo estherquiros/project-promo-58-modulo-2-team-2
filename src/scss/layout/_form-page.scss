@@ -9,6 +9,7 @@
     "form-content"
     "footer";
   @media (min-width: var.$tablet-bp) {
+    grid-template-columns: 1fr 1fr;
     grid-template-areas:
     "header header"
     "form-content preview"
