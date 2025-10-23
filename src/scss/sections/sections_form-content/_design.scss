@@ -9,24 +9,31 @@
 .design-form-section {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 3rem;
+  align-items: flex-start;  
   margin-left: 1.25rem;  
 }
 
-/*.hidden {
+.collapsed {
   display: none;
-}*/
+}
 
 .titleDesign {
-  flex-shrink: 0;
-  margin: 0;
+  flex-shrink: 0;  
   padding-top: 2rem;
+  padding-bottom: 2rem;
   font-family: $font_printwriter;
   text-transform: uppercase;
-  font-size: 2rem;  
-  margin-left: 1.25rem;  
+  font-size: 2rem;     
   cursor: pointer;
+}
+
+.designButton {
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  text-transform: inherit;  
+  cursor: pointer;  
 }
 
 .icon-design {
@@ -39,6 +46,7 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 1rem;  
+  margin-left: 1.25rem;  
 }
 
 label {
@@ -56,9 +64,9 @@ label {
 .option-title {
   font-weight: bold;
   font-size: 1.5rem;
-  padding-left: 0.5rem;
+  padding-left: 0.5rem;  
   font-family: $font_printwriter;
-   width: 16rem;
+  width: 18rem;
   flex-shrink: 0;
 }
 
@@ -130,7 +138,8 @@ label {
   }
 
   .option-title {
-    font-size: 2rem;
+    font-size: 2rem; 
+    padding-left: 1rem;     
     width: 25rem;
   }
 

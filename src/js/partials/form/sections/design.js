@@ -1,13 +1,16 @@
 "use strict";
 
-//QUERY SELECTOR 
+//QUERY SELECTOR
 
-const btnDesign = document.querySelector(`#designButton`);
+const btnToggleDesign = document.querySelector(".js_design_button");
+const formDesign = document.querySelector(".js_design_form");
 
+// VARIABLES
 
-// VARIABLES 
+//EVENTOS
 
-//EVENTOS 
+btnToggleDesign.addEventListener("click", () => {
+  formDesign.classList.toggle("collapsed");
+});
 
-
-//CÓDIGO AL CARGAR LA PÁGINA 
+//CÓDIGO AL CARGAR LA PÁGINA
