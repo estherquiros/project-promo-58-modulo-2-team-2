@@ -24,3 +24,20 @@
    }
   }
 }
+
+.preview-btn-resert{
+  align-self: flex-end;
+  margin-left: auto;
+  margin-right: 3 rem;
+  background-color: var.$color_primary;
+  color: var.$color_ink;
+  border-radius: 10%;
+  font-family: var.$font_printwriter;
+  font-size: 1rem;
+  padding: 5px 10px;
+  margin-top: 5px;
+  transition: background-color 0.3s ease;
+}
+.preview-btn-resert:hover{
+  background-color: var.$color_grey;
+}
