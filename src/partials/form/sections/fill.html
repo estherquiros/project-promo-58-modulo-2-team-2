@@ -1,63 +1,57 @@
-
+<hr class="separator" />
 <section class="fillOptions">
-    <h1 class="titleFill">¡Crea la portada del día!</h1>
+  <h2 class="titleFill">Rellena los datos</h2>
   <div class="section-fill">
-  <form class="form-section-fill">
-    <div class="newsHeadlineFill">
-    <label for="newsHeadline">Título de la Nota</label>
-    <input
-      placeholder="Escribe aquígit..."
-      id="newsHeadline"
-      type="text"
-      name="newsHeadline"
-    />
-    </div>
-    <div class="newsSubtitleFill">
-    <label for="newsSubtitle">Subtítulo de la Nota</label>
-    <input
-      placeholder="Escribe aquí..."
-      id="newsSubtitle"
-      type="text"
-      name="newsSubtitle"
-    />
-    </div>
-    <div class="imageContainer">
-        <input 
-            type="file" 
-            id="addImage" 
-            name="newsImage" 
-            accept="image/*"
-            required
-            style="display: none;">
-        <label for="addImage" class="buttonAddImage">
-            Añadir imagen 📸
-        </label>
-        <p>Solo archivos PNG, JPG, JPEG.</p>
-    </div>
-    <div class="publicationDateFill">
-        <label for="publicationDate">Fecha de publicación:</label>
-        <input  
-         type="date" 
-         id="publicationDate" 
-         name="publicationDate" 
-         required
+    <form class="form-section-fill">
+      <div class="newsHeadlineFill">
+        <label class="newsHeadline" for="newsHeadline">Título de la Nota</label>
+        <input
+          placeholder="Escribe aquí..."
+          id="newsHeadline"
+          type="text"
+          name="newsHeadline"
         />
-    </div>
-    <div class="publicationNumberFill">
-    <label for="publicationNumber">Número de la publicación:</label>
-    <select id="publicationNumber" name="publicationNumber">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5</option>
-      <option value="6">7</option>
-      <option value="8">8</option>
-      <option value="9">9</option>
-      <option value="10">10</option>
-    </select>
-    </div>
+      </div>
+      <div class="newsSubtitleFill">
+        <label class="newsSubtitle" for="newsSubtitle">Subtítulo de la Nota</label>
+        <input
+          placeholder="Escribe aquí..."
+          id="newsSubtitle"
+          type="text"
+          name="newsSubtitle"
+        />
+      </div>
+      <div>
+        <label class="newsDescription" for="newsDescription">Texto de la Nota:</label>
+            <textarea id="message" name="message" rows="6" cols="40" placeholder="Escribe tu noticia aquí" maxlength="250"></textarea>
+        </div>
+        <div class="imageContainer"> 
+          <label class="filePhoto" for="file">Elige una foto:</label>
+          <input type="file" class="file-fill" id="file" name="file">
+          </div>
+      <div class="publicationDateFill">
+        <label class="publicationDate" for="publicationDate">Fecha de publicación:</label>
+        <input
+          type="date"
+          id="publicationDate"
+          name="publicationDate"
+          required
+        />
+      </div>
+      <div class="publicationNumberFill">
+        <label class="publicationNumber" for="publicationNumber">Número de la publicación:</label>
+        <select id="publicationNumber" name="publicationNumber">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+      </div>
     </form>
-
-
-   
+  </div>
+</section>
