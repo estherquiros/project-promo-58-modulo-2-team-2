@@ -50,11 +50,12 @@
     &--containerImg {
       grid-area: img;
       width: 15rem;
+      max-height: 60%;
       margin: 3rem auto;
-      padding-block: 6rem;
+      padding-block: 1rem;
       &--img {
         width: 100%;
-        height: auto;
+        max-height: auto;
         object-fit: cover;
       }
     }
