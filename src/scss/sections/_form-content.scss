@@ -1,3 +1,15 @@
-.form-content{
+@use "../core/variables" as vars;
+
+.form-content {
   grid-area: form-content;
+  background-color: vars.$color_beige;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-top: 1px solid vars.$color_ink;
+  @media (min-width: vars.$tablet-bp) {
+    border-right: 1px solid vars.$color_ink;
+    border-top: none;
+
+  }
 }
