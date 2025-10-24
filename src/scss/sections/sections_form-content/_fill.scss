@@ -7,8 +7,8 @@
 .fillOptions {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content:flex-start;
+  align-items: flex-start;
   font-family: "Special Elite", system-ui;
   margin: 0 auto;
   padding: 1.25rem 1.25rem;
@@ -18,19 +18,13 @@
   align-items: center;
   padding-bottom: 2rem;
   text-transform: uppercase;
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 .icon-design-fil {
   margin-right: 1rem;
   color: #d64545;
 }
-
-.newsHeadline {
-  font-weight: bold;
-  font-size: 1rem;
-  padding-bottom: 0.5rem;
-} 
 
 .newsHeadline,
 .newsSubtitle,
@@ -42,6 +36,22 @@
     font-size: 1.5rem;
     padding: 1rem 0rem 0.5rem 0rem;
     align-items: center
+}
+
+.placeHolderText {
+  background-color: #f7f4ef;
+  border-radius: 0.5rem; 
+  border-color: #324693;
+  font-family: "Special Elite", system-ui;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+}
+
+.file-fill {
+  font-size: 1rem;
+  padding: 0.5rem;
+  font-family: "Special Elite", system-ui;
+  border-radius: 0.5rem; 
 }
 
 

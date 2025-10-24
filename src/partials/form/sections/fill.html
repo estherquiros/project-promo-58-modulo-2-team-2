@@ -1,12 +1,12 @@
 <hr class="separator" />
 <section class="fillOptions">
   <h2 class="titleFill" id="toggleButtonFill">
-    <i class="fas fa-pen-fancy icon-design-fil"></i>Rellena los datos</h2>
+    <i class="fas fa-pen-fancy icon-design-fil"></i>Rellena</h2>
   <div class="section-fill">
     <form class="form-section-fill">
       <div class="newsHeadlineFill">
         <label class="newsHeadline" for="newsHeadline">Título de la Nota</label>
-        <input
+        <input class="placeHolderText"
           placeholder="Escribe aquí..."
           id="newsHeadline"
           type="text"
@@ -15,7 +15,7 @@
       </div>
       <div class="newsSubtitleFill">
         <label class="newsSubtitle" for="newsSubtitle">Subtítulo de la Nota</label>
-        <input
+        <input class="placeHolderText"
           placeholder="Escribe aquí..."
           id="newsSubtitle"
           type="text"
@@ -24,7 +24,7 @@
       </div>
       <div>
         <label class="newsDescription" for="newsDescription">Texto de la Nota:</label>
-            <textarea id="message" name="message" rows="6" cols="40" placeholder="Escribe tu noticia aquí" maxlength="250"></textarea>
+            <textarea id="message" name="message" rows="6" cols="34" class="placeHolderText" placeholder="Escribe tu noticia aquí..." maxlength="260"></textarea>
         </div>
         <div class="imageContainer"> 
           <label class="filePhoto" for="file">Elige una foto:</label>
@@ -32,7 +32,7 @@
           </div>
       <div class="publicationDateFill">
         <label class="publicationDate" for="publicationDate">Fecha de publicación:</label>
-        <input
+        <input class="placeHolderText"
           type="date"
           id="publicationDate"
           name="publicationDate"
@@ -41,7 +41,7 @@
       </div>
       <div class="publicationNumberFill">
         <label class="publicationNumber" for="publicationNumber">Número de la publicación:</label>
-        <select id="publicationNumber" name="publicationNumber">
+        <select class="placeHolderText" id="publicationNumber" name="publicationNumber">
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
