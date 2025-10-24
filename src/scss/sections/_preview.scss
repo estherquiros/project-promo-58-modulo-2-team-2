@@ -12,11 +12,6 @@
   align-items: center;
   gap: 3rem;
 
-  @media (min-width: var.$tablet-bp) {
-    gap: none;
-    padding-block: 0;
-    }
-
   &__article {
    @include mix.default();
    &.type-sensacionalist{
@@ -36,10 +31,13 @@
   color: var.$color_ink;
   border-radius: 10%;
   font-family: var.$font_printwriter;
-  font-size: 1rem;
+  font-size: 1.5rem;
   padding: 5px 10px;
   transition: background-color 0.3s ease;
+  margin-top: 2rem;
 }
 .preview-btn-resert:hover{
   background-color: var.$color_grey;
+  color: var.$color_primary;
+  border-color: var.$color_primary;
 }
