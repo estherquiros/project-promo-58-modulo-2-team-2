@@ -10,6 +10,7 @@
   &--div {
     display: grid;
     grid-template-columns: 1fr;
+    min-width: 0;
     justify-items: center;
     min-width: 240px;
     grid-template-areas:
@@ -38,12 +39,14 @@
       padding-bottom: 0.5rem;
       font-size: 3rem;
       text-align: center;
+      @include breakable-text;
     }
     &--subtitle {
       grid-area: subtitle;
       font-family: var.$font_handwriter;
       font-size: 2rem;
       text-align: center;
+      @include breakable-text;
     }
     &--containerImg {
       grid-area: img;
@@ -63,7 +66,7 @@
       text-align: justify;
       width: 100%;
       align-self: center;
-
+      @include breakable-text;
     }
   }
 }
@@ -100,7 +103,7 @@
   }
   & .preview__article--div--subtitle {
     font-family: var.$font_sensacionalist;
-    padding-bottom: 2rem;
+    padding-right: 1rem;
     color: #ff9a47;
     z-index: 1;
     align-self: center;
@@ -155,24 +158,21 @@
     font-family: var.$font_economist;
     color: var.$color_ink;
     z-index: 1;
-
   }
   & .preview__article--div--containerImg {
     width: 10rem;
     height: auto;
     z-index: 1;
-
   }
   & .preview__article--div--text {
     font-family: var.$font_economist;
     padding: 0.5rem;
     z-index: 1;
     overflow-y: auto;
-    overflow-x:hidden;
+    overflow-x: hidden;
     padding-top: 2rem;
   }
 }
-
 
 @mixin generalist() {
   background-image: url("/images/background_generalist.png");
@@ -185,5 +185,13 @@
   & .preview__article--div--title {
     color: var.$color_primary;
   }
+}
 
+
+// Mixin para controlar los espacios de escritura
+@mixin breakable-text {
+  white-space: normal;       // permite saltos de línea
+  overflow-wrap: break-word; // rompe palabras largas
+  max-width: 100%;           // no se sale del contenedor
+  min-width: 0;              // evita empujar celdas vecinas
 }

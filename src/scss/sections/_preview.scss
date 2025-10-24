@@ -12,11 +12,6 @@
   align-items: center;
   gap: 3rem;
 
-  @media (min-width: var.$tablet-bp) {
-    gap: none;
-    padding-block: 0;
-    }
-
   &__article {
    @include mix.default();
    &.type-sensacionalist{
