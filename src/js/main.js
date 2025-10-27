@@ -3,6 +3,7 @@
 console.log(">> Ready :)");
 
 import "./partials/form/sections/design.js";
+import "./partials/form/sections/fill.js";
 
 const magazineDesign = document.querySelector("#magazineDesign");
 const economyDesign = document.querySelector("#economyDesign");

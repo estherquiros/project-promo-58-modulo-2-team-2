@@ -12,19 +12,20 @@
   <div class="js-form-section section-fill collapsed">
     <form class="form-section-fill">
       <div class="newsHeadlineFill">
-        <label class="newsHeadline" for="newsHeadline">Título de la Nota</label>
+        <label class="newsHeadline" for="newsHeadline">Título</label>
         <input
           class="placeHolderText"
           placeholder="Escribe aquí..."
           id="newsHeadline"
           type="text"
           name="newsHeadline"
+           maxlength="50"
         />
       </div>
 
       <div class="newsSubtitleFill">
         <label class="newsSubtitle" for="newsSubtitle"
-          >Subtítulo de la Nota</label
+          >Subtítulo</label
         >
         <input
           class="placeHolderText"
@@ -32,12 +33,13 @@
           id="newsSubtitle"
           type="text"
           name="newsSubtitle"
+          maxlength="50"
         />
       </div>
 
       <div>
         <label class="newsDescription" for="newsDescription"
-          >Texto de la Nota:</label
+          >Texto:</label
         >
         <textarea
           id="message"
@@ -70,13 +72,14 @@
 
       <div class="publicationNumberFill">
         <label class="publicationNumber" for="publicationNumber"
-          >Número de la publicación:</label
+          >Número de edición:</label
         >
         <select
           class="placeHolderText"
           id="publicationNumber"
           name="publicationNumber"
         >
+          <option value="0">0</option>
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
