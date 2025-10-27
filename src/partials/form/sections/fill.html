@@ -1,47 +1,82 @@
 <hr class="separator" />
 <section class="fillOptions">
-  <h2 class="titleFill" id="toggleButtonFill">
-    <i class="fas fa-pen-fancy icon-design-fil"></i>Rellena</h2>
-  <div class="section-fill">
+
+  <div class="titleFillForm">
+    <h2 class="titleFill">
+      <button class="fillButton js-fill-button" type="button">
+        <i class="fas fa-pen-fancy icon-design-fil"></i>Rellena
+      </button>
+    </h2>
+  </div>
+
+  <div class="js-form-section section-fill collapsed">
     <form class="form-section-fill">
       <div class="newsHeadlineFill">
         <label class="newsHeadline" for="newsHeadline">Título de la Nota</label>
-        <input class="placeHolderText"
+        <input
+          class="placeHolderText"
           placeholder="Escribe aquí..."
           id="newsHeadline"
           type="text"
           name="newsHeadline"
         />
       </div>
+
       <div class="newsSubtitleFill">
-        <label class="newsSubtitle" for="newsSubtitle">Subtítulo de la Nota</label>
-        <input class="placeHolderText"
+        <label class="newsSubtitle" for="newsSubtitle"
+          >Subtítulo de la Nota</label
+        >
+        <input
+          class="placeHolderText"
           placeholder="Escribe aquí..."
           id="newsSubtitle"
           type="text"
           name="newsSubtitle"
         />
       </div>
+
       <div>
-        <label class="newsDescription" for="newsDescription">Texto de la Nota:</label>
-            <textarea id="message" name="message" rows="6" cols="34" class="placeHolderText" placeholder="Escribe tu noticia aquí..." maxlength="260"></textarea>
-        </div>
-        <div class="imageContainer"> 
-          <label class="filePhoto" for="file">Elige una foto:</label>
-          <input type="file" class="file-fill" id="file" name="file">
-          </div>
+        <label class="newsDescription" for="newsDescription"
+          >Texto de la Nota:</label
+        >
+        <textarea
+          id="message"
+          name="message"
+          rows="6"
+          cols="34"
+          class="placeHolderText"
+          placeholder="Escribe tu noticia aquí..."
+          maxlength="260"
+        ></textarea>
+      </div>
+
+      <div class="imageContainer">
+        <label class="filePhoto" for="file">Elige una foto:</label>
+        <input type="file" class="file-fill" id="file" name="file" />
+      </div>
+
       <div class="publicationDateFill">
-        <label class="publicationDate" for="publicationDate">Fecha de publicación:</label>
-        <input class="placeHolderText"
+        <label class="publicationDate" for="publicationDate"
+          >Fecha de publicación:</label
+        >
+        <input
+          class="placeHolderText"
           type="date"
           id="publicationDate"
           name="publicationDate"
           required
         />
       </div>
+
       <div class="publicationNumberFill">
-        <label class="publicationNumber" for="publicationNumber">Número de la publicación:</label>
-        <select class="placeHolderText" id="publicationNumber" name="publicationNumber">
+        <label class="publicationNumber" for="publicationNumber"
+          >Número de la publicación:</label
+        >
+        <select
+          class="placeHolderText"
+          id="publicationNumber"
+          name="publicationNumber"
+        >
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>

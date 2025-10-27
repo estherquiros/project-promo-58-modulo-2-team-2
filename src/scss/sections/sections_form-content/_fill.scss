@@ -10,15 +10,24 @@
   justify-content:flex-start;
   align-items: flex-start;
   font-family: "Special Elite", system-ui;
-  margin: 0 auto;
   padding: 1.25rem 1.25rem;
 }
 
 .titleFill {
   align-items: center;
-  padding-bottom: 2rem;
+  padding-bottom: 1.5rem;
   text-transform: uppercase;
   font-size: 2rem;
+}
+
+.fillButton  {
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  text-transform: inherit;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .icon-design-fil {
@@ -54,6 +63,9 @@
   border-radius: 0.5rem; 
 }
 
+.collapsed {
+  display: none;
+}
 
 @media (min-width: 768px) {
   .titleFill {
@@ -67,9 +79,5 @@
 .publicationNumber,
 .publicationDate {
     font-size: 2rem;
-  }
-
-  .form-section-fill {
-    padding: 2rem;
   }
 }
