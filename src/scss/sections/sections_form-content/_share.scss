@@ -1,8 +1,5 @@
 @use "../../core/variables" as vars;
 
-.separator {
-  border: 0.3rem solid vars.$color_secondary;
-}
 .share {
   display: flex;
   gap: 10px;
@@ -30,6 +27,7 @@
     gap: 2rem;
     width: 100%;
     padding: 20px;
+    border-top: 0.6rem solid vars.$color_secondary;
   }
   &-button {
     background-color: vars.$color_grey;
