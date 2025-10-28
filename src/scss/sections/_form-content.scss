@@ -11,6 +11,7 @@
   @media (min-width: vars.$tablet-bp) {
     border-right: 1px solid vars.$color_ink;
     border-top: none;
+    gap: 40px;
   }
   &__subtitle {
     font-size: 3rem;
@@ -19,6 +20,7 @@
     padding-top: 2rem;
     color: vars.$color_secondary;
     border-bottom: 1rem solid vars.$color_secondary;
+    padding-block: 3rem;
 
     @media (min-width: vars.$tablet-bp) {
       font-size: 4rem;
