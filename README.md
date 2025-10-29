@@ -1,40 +1,87 @@
-# Mi proyecto
+# Generador de Artículos de Periódico
 
-A rellenar
+![Vista Previa del Proyecto](./public/images/newspapper.png)
 
-## Guía de inicio rápido
+## 📰 Sobre el Proyecto
 
-> **NOTA:** Necesitas tener instalado [Node JS](https://nodejs.org/) con una versión superior a la 14 para trabajar con este Starter Kit:
+Este proyecto es una aplicación web que permite a los usuarios crear tarjetas de artículos personalizables con estilo de periódico. Los usuarios pueden ingresar la información de su artículo y generar una tarjeta compartible con el estilo de tres diseños de periódico distintos.
 
-### Pasos a seguir cada vez que queremos arrancar un proyecto desde cero:
+## ✨ Características
 
-1. **Crea tu propio repositorio.**
-1. Descarga este **Starter kit desde GitHub**.
-   - No recomendamos que clones este repo ya que no podrás añadir commits.
-1. **Copia todos los ficheros** de este Starter kit en la carpeta raíz de tu repositorio.
-   - Recuerda que debes copiar **también los ficheros ocultos** que comienzan por un punto.
-   - Si has decidido clonar este repo, no debes copiar la carpeta `.git`. Si lo haces estarás machacando tu propio repositorio.
-1. **Abre una terminal** en la carpeta raíz de tu repositorio.
-1. **Instala las dependencias** locales ejecutando en la terminal el comando:
+- **Tarjetas de Artículos Personalizables:**
 
-```bash
-npm install
+  - Añade título y contenido del artículo
+  - Incluye información del autor
+  - Sube tu foto personal
+  - Selecciona preferencias de diseño
+
+- **Secciones Interactivas del Formulario:**
+
+  - Diseño: Personaliza la apariencia visual
+  - Rellena: Introduce el contenido de tu artículo
+  - Comparte: Genera y comparte tu tarjeta
+
+- **Diseño Responsive:**
+
+  - Enfoque mobile-first
+  - Versiones para tablet y escritorio
+  - Diseño optimizado para todos los dispositivos
+
+- **Vista Previa en Tiempo Real:**
+
+  - Ve tus cambios al instante
+  - Previsualiza exactamente cómo quedará tu tarjeta
+
+- **Opciones de Compartir:**
+  - Genera una URL única para tu tarjeta
+  - Comparte directamente en Twitter
+  - Copia el enlace al portapapeles
+
+## 🛠️ Construido Con
+
+- HTML5
+- SCSS
+- JavaScript
+- Vite
+- Node.js
+
+## 🎨 Características de Diseño
+
+- Tipografía clásica de periódico
+- Texturas de papel vintage
+- Diseños responsive
+- Animaciones interactivas
+- Efectos hover en botones
+- Estilizado personalizado de formularios
+
+## 📁 Estructura del Proyecto
+
+```
+proyecto/
+├── public/
+│   └── images/
+├── src/
+│   ├── js/
+│   ├── scss/
+│   │   ├── core/
+│   │   ├── layout/
+│   │   └── sections/
+│   ├── pages/
+│   └── partials/
+├── package.json
+└── vite.config.js
 ```
 
-### Pasos para arrancar el proyecto:
+## 👥 Equipo
 
-Una vez hemos instalado las dependencias, vamos a arrancar el proyecto. **El proyecto hay que arrancarlo cada vez que te pongas a programar.** Para ello ejecuta el comando:
+Este proyecto ha sido desarrollado por el Equipo 2 de la Promoción 58:
 
-```bash
-npm run dev
-```
+-Esther Bello Quirós
+-Jennifer Román
+-Lis García Arango
+-Mercedes Bichweiler
+-Mónica Coca Pelaz
 
-Este comando:
+## 📄 Licencia
 
-- **Abre una ventana de Chrome y muestra tu página web**, al igual que hace el plugin de VS Code Live Server (Go live).
-- También **observa** todos los ficheros que hay dentro de la carpeta `src/`, para que cada vez que modifiques un fichero **refresca tu página en Chrome**.
-- También **procesa los ficheros** HTML, SASS / CSS y JS. Por ejemplo:
-  - Convierte los ficheros SASS en CSS.
-  - Combina los diferentes ficheros de HTML y los agrupa en uno o varios ficheros HTML.
-
-Después de ejecutar `npm run dev` ya puedes empezar a editar todos los ficheros que están dentro de la carpeta `src/` y programar cómodamente.
+Este proyecto está bajo la Licencia MIT - ver el archivo LICENSE para más detalles.
