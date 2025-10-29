@@ -43,17 +43,25 @@ fileInput.addEventListener (`change`, (event) => {
         reader.readAsDataURL(selectedFile);
     
     } else {
-        if (imagePreview.classList.contains ("type-sensacionalist")) {
+        // Asumiendo que 'card' es la tarjeta donde están las clases de diseño
+        if (card.classList.contains("type-sensacionalist")) {
             imagePreview.src = "/images/img_preview_sensacionalist.png";
         }
-        // Si el usuario cancela la selección, aparece la imagen predetermina del preview (periódico sensacionalista)
-        imagePreview.src = "/images/img_preview_generalist.png";
+       
+        else if (card.classList.contains("type-economist")) {
+            imagePreview.src = "/images/img_preview_economy.png";
+        }
+       
+        else if (card.classList.contains("type-generalist")) {
+            imagePreview.src = "/images/img_preview_generalist.png";
+        }
+       
+        else {
+            // Fallback si no hay ninguna clase (o si quieres una imagen por defecto)
+            imagePreview.src = "/images/img_preview_generalist.png";
+        }
     }
 });
-
-
-
-
 
 
 editionInput.addEventListener (`change`, (ev) => {
