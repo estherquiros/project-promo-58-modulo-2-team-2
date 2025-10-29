@@ -9,7 +9,8 @@ const formDesign = document.querySelector(".js_design_form");
 
 //EVENTOS
 
-btnToggleDesign.addEventListener("click", () => {
+btnToggleDesign.addEventListener("click", (event) => {
+  event.preventDefault();
   formDesign.classList.toggle("collapsed");
 });
 

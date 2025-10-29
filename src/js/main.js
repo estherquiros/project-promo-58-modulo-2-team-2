@@ -23,7 +23,7 @@ const addStyle = (style) => {
 
   if (style === "type-sensacionalist") {
     card.classList.add(style);
-    ImgPreview.src = "/images/background_sensacionalist.png";
+    ImgPreview.src = "/images/img_preview_sensacionalist.png";
   }
   if (style === "type-economist") {
     card.classList.add(style);
