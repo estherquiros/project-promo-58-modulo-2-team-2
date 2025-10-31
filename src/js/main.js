@@ -14,6 +14,13 @@ const ImgPreview = document.querySelector(
   ".preview__article--div--containerImg--img"
 );
 
+/* Variable para las flechas*/
+const angles = document.querySelector('.share-angles svg, .js-share-angles');
+
+const rotateArrow = () =>{
+  angles.classList.toggle("rotated");
+}
+
 const addStyle = (style) => {
   const stylesToRemove = [
     "type-sensacionalist",

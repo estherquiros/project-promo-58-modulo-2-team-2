@@ -187,11 +187,21 @@
   }
 }
 
-
 // Mixin para controlar los espacios de escritura
 @mixin breakable-text {
-  white-space: normal;       // permite saltos de línea
+  white-space: normal; // permite saltos de línea
   overflow-wrap: break-word; // rompe palabras largas
-  max-width: 100%;           // no se sale del contenedor
-  min-width: 0;              // evita empujar celdas vecinas
+  max-width: 100%; // no se sale del contenedor
+  min-width: 0; // evita empujar celdas vecinas
+}
+
+@mixin angles {
+  font-size: 2.5rem;
+  padding-left: 3rem;
+  padding-bottom: 0.5rem;
+  transition: transform 0.3s ease;
+  &.rotated {
+    transform: rotate(90deg);
+    padding-right: 3rem;
+  }
 }
