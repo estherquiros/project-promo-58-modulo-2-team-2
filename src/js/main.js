@@ -15,23 +15,24 @@ const ImgPreview = document.querySelector(
 );
 
 const addStyle = (style) => {
-  console.log(`La funcion de cambio de clases está entrando y recibo ${style}`);
+  const stylesToRemove = [
+    "type-sensacionalist",
+    "type-economist",
+    "type-generalist",
+  ];
   card.classList.forEach((className) => {
-    if (className !== "preview__article") {
+    if (stylesToRemove.includes(className)) {
       card.classList.remove(className);
     }
   });
 
+  card.classList.add("preview__article", style);
+
   if (style === "type-sensacionalist") {
-    card.classList.add(style);
     ImgPreview.src = "/images/img_preview_sensacionalist.png";
-  }
-  if (style === "type-economist") {
-    card.classList.add(style);
+  } else if (style === "type-economist") {
     ImgPreview.src = "/images/img_preview_economy.png";
-  }
-  if (style === "type-generalist") {
-    card.classList.add(style);
+  } else if (style === "type-generalist") {
     ImgPreview.src = "/images/img_preview_generalist.png";
   }
 };
