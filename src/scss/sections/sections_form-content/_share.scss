@@ -1,5 +1,6 @@
 @use "../../core/variables" as vars;
 @use "../../core/mixins" as mix;
+@use "sass:color";
 
 .share {
   display: flex;
@@ -95,7 +96,7 @@
     &:hover {
       transform: scale(1.05);
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-      background-color: darken(vars.$color_primary, 10%);
+      background-color: color.adjust(vars.$color_primary, $lightness: -10%);
     }
 
     &:active {
