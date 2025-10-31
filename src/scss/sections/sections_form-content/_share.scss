@@ -1,4 +1,5 @@
 @use "../../core/variables" as vars;
+@use "../../core/mixins" as mix;
 
 .share {
   display: flex;
@@ -62,6 +63,9 @@
   &-nodes-icon {
     height: 15px;
   }
+  &-angles {
+    @include mix.angles();
+  }
   &-card {
     display: flex;
     flex-direction: column;
@@ -110,6 +114,7 @@
 .collapsed {
   display: none;
 }
+
 
 @media (min-width: 768px) {
   .share-title {

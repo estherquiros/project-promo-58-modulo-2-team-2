@@ -13,4 +13,5 @@ const content = document.querySelector(`.js_share_content`);
 btn2.addEventListener(`click`, (ev) => {
   ev.preventDefault();
   content.classList.toggle("collapsed");
+  rotateArrow();
 });
