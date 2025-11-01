@@ -2,6 +2,14 @@
 
 console.log(">> Ready :)");
 
+const collapseAllSections = (element) => {
+  const collapsibleSections = document.querySelectorAll(".js_collapsible");
+  for (const section of collapsibleSections) {
+    if (section === element) continue;
+    section.classList.add("collapsed");
+  }
+};
+
 import "./partials/form/sections/design.js";
 import "./partials/form/sections/fill.js";
 import "./partials/form/sections/share.js";
@@ -15,11 +23,11 @@ const ImgPreview = document.querySelector(
 );
 
 /* Variable para las flechas*/
-const angles = document.querySelector('.share-angles svg, .js-share-angles');
+const angles = document.querySelector(".share-angles svg, .js-share-angles");
 
-const rotateArrow = () =>{
+const rotateArrow = () => {
   angles.classList.toggle("rotated");
-}
+};
 
 const addStyle = (style) => {
   const stylesToRemove = [

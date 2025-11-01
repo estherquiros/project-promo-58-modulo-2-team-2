@@ -11,6 +11,7 @@ const formDesign = document.querySelector(".js_design_form");
 
 btnToggleDesign.addEventListener("click", (event) => {
   event.preventDefault();
+  collapseAllSections(formDesign);
   formDesign.classList.toggle("collapsed");
 });
 
