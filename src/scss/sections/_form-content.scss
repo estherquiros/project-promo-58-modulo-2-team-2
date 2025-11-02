@@ -2,11 +2,26 @@
 
 .form-content {
   grid-area: form-content;
-  background-color: vars.$color_beige;
+  position: relative;
+  //background-color: vars.$color_beige;
+  background-image: url('/images/paper-texture.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  filter: drop-shadow(8px 8px 15px rgba(0, 0, 0, 0.9));
   display: flex;
   flex-direction: column;
   gap: 20px;
   border-top: 1px solid vars.$color_ink;
+  padding-bottom: 4rem;
+   // Capa semitransparente encima
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0; // top:0; right:0; bottom:0; left:0;
+    background-color: rgba(255, 255, 255, 0.7); // color y opacidad del "velo"
+    pointer-events: none; // para no bloquear clics
+  }
 
   @media (min-width: vars.$tablet-bp) {
     border-right: 1px solid vars.$color_ink;
@@ -14,17 +29,19 @@
     gap: 40px;
   }
   &__subtitle {
+    background-color: vars.$color_beige;
     font-size: 3rem;
     text-align: center;
     font-family: vars.$font_printwriter;
     padding-top: 2rem;
     color: vars.$color_secondary;
-    border-bottom: 1rem solid vars.$color_secondary;
+    border-bottom: 0.5rem solid vars.$color_secondary;
     padding-block: 3rem;
-
+    text-shadow: 10px 10px 20px vars.$color_ink;
+    z-index: 1;
     @media (min-width: vars.$tablet-bp) {
       font-size: 4rem;
-      padding-block: 6rem;
+      padding-block: 4rem;
     }
   }
 }

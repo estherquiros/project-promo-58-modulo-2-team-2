@@ -196,12 +196,31 @@
 }
 
 @mixin angles {
-  font-size: 2.5rem;
-  padding-left: 3rem;
-  padding-bottom: 0.5rem;
+  display: inline-block;
+  font-size: 2rem;
+  padding-left: 1rem;
+  padding-bottom: 0.2rem;
   transition: transform 0.3s ease;
+  @media (min-width: var.$tablet-bp) {
+    font-size: 2.5rem;
+    padding-left: 3rem;
+    padding-bottom: 0.5rem;
+  }
   &.rotated {
     transform: rotate(90deg);
-    padding-right: 3rem;
+    padding-right: 1rem;
+    @media (min-width: var.$tablet-bp) {
+      padding-right: 3rem;
+    }
   }
+}
+
+@mixin sectionsform{
+  z-index:1;
+  background-color: var.$color_beige;
+  border-radius: 5px;
+  padding-left: 1rem;
+  box-shadow: 5px 10px 15px var.$color_ink;
+  margin-inline: 1.5rem;
+  padding-bottom: 1.5rem;
 }

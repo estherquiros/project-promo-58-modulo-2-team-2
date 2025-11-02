@@ -1,4 +1,5 @@
 @use "../../core/variables" as vars;
+@use "../../core/mixins" as mix;
 
 .fillOptions {
   display: flex;
@@ -6,14 +7,14 @@
   justify-content: flex-start;
   align-items: flex-start;
   font-family: "Special Elite", system-ui;
-  padding: 1.25rem 1.25rem;
+  @include mix.sectionsform();
 }
 
 .titleFill {
   align-items: center;
-  padding-bottom: 1.5rem;
   text-transform: uppercase;
   font-size: 2rem;
+  padding-block: 2rem;
 }
 
 .fillButton {
@@ -61,6 +62,14 @@
 
 .collapsed {
   display: none;
+}
+
+#angleFill {
+    @include mix.angles();
+    padding-left: 3.5rem;
+    &.rotated{
+      padding-top: 1rem;
+    }
 }
 
 @media (min-width: 768px) {
