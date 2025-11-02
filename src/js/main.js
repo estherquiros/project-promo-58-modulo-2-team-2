@@ -13,6 +13,7 @@ const collapseAllSections = (element) => {
 import "./partials/form/sections/design.js";
 import "./partials/form/sections/fill.js";
 import "./partials/form/sections/share.js";
+import "./partials/form/preview.js";
 
 const magazineDesign = document.querySelector("#magazineDesign");
 const economyDesign = document.querySelector("#economyDesign");
