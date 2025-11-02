@@ -2,9 +2,18 @@
 
 console.log(">> Ready :)");
 
+const collapseAllSections = (element) => {
+  const collapsibleSections = document.querySelectorAll(".js_collapsible");
+  for (const section of collapsibleSections) {
+    if (section === element) continue;
+    section.classList.add("collapsed");
+  }
+};
+
 import "./partials/form/sections/design.js";
 import "./partials/form/sections/fill.js";
 import "./partials/form/sections/share.js";
+import "./partials/form/preview.js";
 
 const magazineDesign = document.querySelector("#magazineDesign");
 const economyDesign = document.querySelector("#economyDesign");
@@ -19,23 +28,24 @@ const rotateArrow = (angle) => {
 };
 
 const addStyle = (style) => {
-  console.log(`La funcion de cambio de clases está entrando y recibo ${style}`);
+  const stylesToRemove = [
+    "type-sensacionalist",
+    "type-economist",
+    "type-generalist",
+  ];
   card.classList.forEach((className) => {
-    if (className !== "preview__article") {
+    if (stylesToRemove.includes(className)) {
       card.classList.remove(className);
     }
   });
 
+  card.classList.add("preview__article", style);
+
   if (style === "type-sensacionalist") {
-    card.classList.add(style);
     ImgPreview.src = "/images/img_preview_sensacionalist.png";
-  }
-  if (style === "type-economist") {
-    card.classList.add(style);
+  } else if (style === "type-economist") {
     ImgPreview.src = "/images/img_preview_economy.png";
-  }
-  if (style === "type-generalist") {
-    card.classList.add(style);
+  } else if (style === "type-generalist") {
     ImgPreview.src = "/images/img_preview_generalist.png";
   }
 };

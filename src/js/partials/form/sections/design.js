@@ -12,6 +12,7 @@ const angleDesign = document.querySelector("#angleDesign");
 
 btnToggleDesign.addEventListener("click", (event) => {
   event.preventDefault();
+  collapseAllSections(formDesign);
   formDesign.classList.toggle("collapsed");
   rotateArrow(angleDesign);
 });
