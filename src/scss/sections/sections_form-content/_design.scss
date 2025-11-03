@@ -133,9 +133,9 @@ label {
 
 #angleDesign {
     @include angles();
-    padding-left: 5.5rem;
+    padding-left: 1rem;
     &.rotated{
-      padding-top: 2.5rem;
+      transform: rotate(90deg);
     }
 }
 
