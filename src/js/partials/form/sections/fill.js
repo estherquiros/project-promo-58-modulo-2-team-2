@@ -73,6 +73,7 @@ buttonFill.addEventListener(`click`, (ev) => {
   ev.preventDefault();
   collapseAllSections(formSection);
   formSection.classList.toggle(`collapsed`);
+  rotateArrow(angleFill);
 });
 
 nameInput.addEventListener("input", (ev) => {

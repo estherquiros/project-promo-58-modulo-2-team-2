@@ -2,9 +2,6 @@
 const btnReset = document.querySelector('.js_btnReset');
 const formFill = document.querySelector('.js_formFill');
 
-nameInput.addEventListener('input',() => {
-  defaultTitle.textContent = nameInput.value;
-});
 
 
 
