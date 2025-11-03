@@ -13,249 +13,263 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Special+Elite&display=swap"
       rel="stylesheet"
-    />
+    />
+
     <link rel="icon" href="./images/favicon.png" />
-    <link rel="stylesheet" crossorigin href="./assets/main-BJ7s_kfi.css">
+    <link rel="stylesheet" crossorigin href="./assets/main-BJ7s_kfi.css" />
   </head>
   <body>
     <main class="form-main">
       <header class="header">
-  <div>
-    <img class="header-img" src="./images/newspapper.png" alt="Periodico" />
-  </div>
-  <div>
-    <h2 class="header-title">Ada Newspapper</h2>
-  </div>
-</header>
-
-      <section class="form-content">
-  <h2 class= "form-content__subtitle">Crea tu noticia</h2>
-  <section class="designOptions">
-  <div class="design-form-section">
-    <h2 class="titleDesign">
-      <button class="designButton js_design_button" type="button">
-        <i class="fas fa-compass-drafting icon-design"></i>Diseña
-      </button>
-    </h2>
-  </div>
-
-  <div class="js_design_form collapsed">
-    <form class="form">
-      <div class="formContainer">
-        <div class="magazine">
-          <label for="magazineDesign">
-            <input
-              id="magazineDesign"
-              type="radio"
-              value="magazineDesign"
-              name="newsDesign" />
-            <div class="option-content">
-              <span class="option-title">Revista del corazón</span>
-              <div class="magazineColors">
-                <div class="magazineColor1"></div>
-                <div class="magazineColor2"></div>
-                <div class="magazineColor3"></div>
-              </div>
-            </div>
-          </label>
+        <div>
+          <img
+            class="header-img"
+            src="./images/newspapper.png"
+            alt="Periodico"
+          />
         </div>
-
-        <div class="economy">
-          <label for="economyDesign">
-            <input
-              id="economyDesign"
-              type="radio"
-              value="economyDesign"
-              name="newsDesign" />
-            <div class="option-content">
-              <span class="option-title">Diario económico</span>
-              <div class="economyColors">
-                <div class="economyColor1"></div>
-                <div class="economyColor2"></div>
-                <div class="economyColor3"></div>
-              </div>
-            </div>
-          </label>
+        <div>
+          <h2 class="header-title">Ada Newspapper</h2>
         </div>
+      </header>
 
-        <div class="newspaper">
-          <label for="newspaperDesign">
-            <input
-              id="newspaperDesign"
-              type="radio"
-              value="newspaperDesign"
-              name="newsDesign" />
-            <div class="option-content">
-              <span class="option-title">Periódico</span>
-              <div class="newspaperColors">
-                <div class="newspaperColor1"></div>
-                <div class="newspaperColor2"></div>
-                <div class="newspaperColor3"></div>
+      <form class="form-content">
+        <h2 class="form-content__subtitle">Crea tu noticia</h2>
+        <section class="designOptions">
+          <div class="design-form-section">
+            <h2 class="titleDesign">
+              <button class="designButton js_design_button" type="button">
+                <i class="fas fa-compass-drafting icon-design"></i>Diseña
+              </button>
+            </h2>
+          </div>
+
+          <div class="js_design_form collapsed">
+            <form class="form">
+              <div class="formContainer">
+                <div class="magazine">
+                  <label for="magazineDesign">
+                    <input
+                      id="magazineDesign"
+                      type="radio"
+                      value="magazineDesign"
+                      name="newsDesign"
+                    />
+                    <div class="option-content">
+                      <span class="option-title">Revista del corazón</span>
+                      <div class="magazineColors">
+                        <div class="magazineColor1"></div>
+                        <div class="magazineColor2"></div>
+                        <div class="magazineColor3"></div>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+
+                <div class="economy">
+                  <label for="economyDesign">
+                    <input
+                      id="economyDesign"
+                      type="radio"
+                      value="economyDesign"
+                      name="newsDesign"
+                    />
+                    <div class="option-content">
+                      <span class="option-title">Diario económico</span>
+                      <div class="economyColors">
+                        <div class="economyColor1"></div>
+                        <div class="economyColor2"></div>
+                        <div class="economyColor3"></div>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+
+                <div class="newspaper">
+                  <label for="newspaperDesign">
+                    <input
+                      id="newspaperDesign"
+                      type="radio"
+                      value="newspaperDesign"
+                      name="newsDesign"
+                    />
+                    <div class="option-content">
+                      <span class="option-title">Periódico</span>
+                      <div class="newspaperColors">
+                        <div class="newspaperColor1"></div>
+                        <div class="newspaperColor2"></div>
+                        <div class="newspaperColor3"></div>
+                      </div>
+                    </div>
+                  </label>
+                </div>
               </div>
+            </form>
+          </div>
+        </section>
+
+        <section class="fillOptions">
+          <div class="titleFillForm">
+            <h2 class="titleFill">
+              <button class="fillButton js-fill-button" type="button">
+                <i class="fas fa-pen-fancy icon-design-fil"></i>Rellena
+              </button>
+            </h2>
+          </div>
+
+          <div class="js-form-section section-fill collapsed">
+            <form class="form-section-fill">
+              <div class="newsHeadlineFill">
+                <label class="newsHeadline" for="newsHeadline">Título</label>
+                <input
+                  class="placeHolderText"
+                  placeholder="Escribe aquí..."
+                  id="newsHeadline"
+                  type="text"
+                  name="newsHeadline"
+                  maxlength="50"
+                />
+              </div>
+
+              <div class="newsSubtitleFill">
+                <label class="newsSubtitle" for="newsSubtitle">Subtítulo</label>
+                <input
+                  class="placeHolderText"
+                  placeholder="Escribe aquí..."
+                  id="newsSubtitle"
+                  type="text"
+                  name="newsSubtitle"
+                  maxlength="50"
+                />
+              </div>
+
+              <div>
+                <label class="newsDescription" for="newsDescription"
+                  >Texto:</label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="6"
+                  cols="34"
+                  class="placeHolderText"
+                  placeholder="Escribe tu noticia aquí..."
+                  maxlength="260"
+                ></textarea>
+              </div>
+
+              <div class="imageContainer">
+                <label class="filePhoto" for="file">Elige una foto:</label>
+                <input type="file" class="file-fill" id="file" name="file" />
+              </div>
+
+              <div class="publicationDateFill">
+                <label class="publicationDate" for="publicationDate"
+                  >Fecha de publicación:</label
+                >
+                <input
+                  class="placeHolderText"
+                  type="date"
+                  id="publicationDate"
+                  name="publicationDate"
+                  required
+                />
+              </div>
+
+              <div class="publicationNumberFill">
+                <label class="publicationNumber" for="publicationNumber"
+                  >Número de edición:</label
+                >
+                <select
+                  class="placeHolderText"
+                  id="publicationNumber"
+                  name="publicationNumber"
+                >
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+              </div>
+            </form>
+          </div>
+        </section>
+
+        <div class="share-form">
+          <div class="share">
+            <i
+              class="fa-solid fa-share-nodes share-nodes-icon"
+              style="color: #d64545"
+            ></i>
+            <h2 class="share-title js_share_title">COMPARTE</h2>
+          </div>
+          <div class="collapsed share-content js_share_content">
+            <button type="button" class="share-button js_share_button">
+              <i
+                class="fa-solid fa-address-card share-button-icon"
+                style="background-color: #324693"
+              ></i>
+              <h2>CREA TU PORTADA</h2>
+            </button>
+            <div class="collapsed share-card js_share_card">
+              <h2 class="share-twitter-title">Tu portada ha sido creada:</h2>
+              <a class="share-link" href=""></a>
+              <button type="button" class="share-twitter-button">
+                <i
+                  class="fa-brands fa-twitter share-twitter-icon"
+                  style="color: white"
+                ></i>
+                <p>Compartir en twitter</p>
+              </button>
             </div>
-          </label>
+          </div>
         </div>
       </form>
-    </div>
-  </section>
-
-  <section class="fillOptions">
-  <div class="titleFillForm">
-    <h2 class="titleFill">
-      <button class="fillButton js-fill-button" type="button">
-        <i class="fas fa-pen-fancy icon-design-fil"></i>Rellena
-      </button>
-    </h2>
-  </div>
-
-  <div class="js-form-section section-fill collapsed">
-    <form class="form-section-fill">
-      <div class="newsHeadlineFill">
-        <label class="newsHeadline" for="newsHeadline">Título</label>
-        <input
-          class="placeHolderText"
-          placeholder="Escribe aquí..."
-          id="newsHeadline"
-          type="text"
-          name="newsHeadline"
-          maxlength="50"
-        />
-      </div>
-
-      <div class="newsSubtitleFill">
-        <label class="newsSubtitle" for="newsSubtitle">Subtítulo</label>
-        <input
-          class="placeHolderText"
-          placeholder="Escribe aquí..."
-          id="newsSubtitle"
-          type="text"
-          name="newsSubtitle"
-          maxlength="50"
-        />
-      </div>
-
-      <div>
-        <label class="newsDescription" for="newsDescription">Texto:</label>
-        <textarea
-          id="message"
-          name="message"
-          rows="6"
-          cols="34"
-          class="placeHolderText"
-          placeholder="Escribe tu noticia aquí..."
-          maxlength="260"
-        ></textarea>
-      </div>
-
-      <div class="imageContainer">
-        <label class="filePhoto" for="file">Elige una foto:</label>
-        <input type="file" class="file-fill" id="file" name="file" />
-      </div>
-
-      <div class="publicationDateFill">
-        <label class="publicationDate" for="publicationDate"
-          >Fecha de publicación:</label
-        >
-        <input
-          class="placeHolderText"
-          type="date"
-          id="publicationDate"
-          name="publicationDate"
-          required
-        />
-      </div>
-
-      <div class="publicationNumberFill">
-        <label class="publicationNumber" for="publicationNumber"
-          >Número de edición:</label
-        >
-        <select
-          class="placeHolderText"
-          id="publicationNumber"
-          name="publicationNumber"
-        >
-          <option value="0">0</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">7</option>
-          <option value="8">8</option>
-          <option value="9">9</option>
-          <option value="10">10</option>
-        </select>
-      </div>
-    </form>
-  </div>
-</section>
-
-  <div class="share-form">
-  <div class="share">
-    <i
-      class="fa-solid fa-share-nodes share-nodes-icon"
-      style="color: #d64545"
-    ></i>
-    <h2 class="share-title js_share_title">COMPARTE</h2>
-  </div>
-  <div class="collapsed share-content js_share_content">
-    <button type="button" class="share-button js_share_button">
-      <i
-        class="fa-solid fa-address-card share-button-icon"
-        style="background-color: #324693"
-      ></i>
-      <h2>CREA TU PORTADA</h2>
-    </button>
-    <div class="collapsed share-card js_share_card">
-      <h2 class="share-twitter-title">Tu portada ha sido creada:</h2>
-      <a class="share-link" href=""></a>
-      <button type="button" class="share-twitter-button">
-        <i
-          class="fa-brands fa-twitter share-twitter-icon"
-          style="color: white"
-        ></i>
-        <p>Compartir en twitter</p>
-      </button>
-    </div>
-  </div>
-</div>
-
-</section>
 
       <section class="preview">
-  <article class="preview__article type-generalist">
-    <div class="preview__article--div">
-      <div class="preview__article--div--info">
-        <span class="js_date preview__article--div--info--date">Fecha</span>
-        <span class="js_edition preview__article--div--info--number"
-          >Nº de edición</span
-        >
-      </div>
-      <h2 class="js_title preview__article--div--title">Título</h2>
-      <h3 class="js_subtitle preview__article--div--subtitle">Subtitulo</h3>
-      <div class="preview__article--div--containerImg">
-        <img
-          src="./images/img_preview_generalist.png"
-          alt="Imagen de ejemplo"
-          class="js_previewImg preview__article--div--containerImg--img"
-        />
-      </div>
-      <p class="js_description preview__article--div--text">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia aperiam
-        fuga tempore? Debitis quo necessitatibus tenetur laborum. Totam, eaque,
-        sapiente dolor eum qui sint rem quo fuga, iste illo similique?
-      </p>
-    </div>
-  </article>
-  <button class="preview-btn-resert">
-    <i class="fa-solid fa-trash"></i>Restablecer
-  </button>
-</section>
+        <article class="preview__article">
+          <div class="preview__article--div">
+            <div class="preview__article--div--info">
+              <span class="js_date preview__article--div--info--date"
+                >Fecha</span
+              >
+              <span class="js_edition preview__article--div--info--number"
+                >Nº de edición</span
+              >
+            </div>
+            <h2 class="js_title preview__article--div--title">Título</h2>
+            <h3 class="js_subtitle preview__article--div--subtitle">
+              Subtitulo
+            </h3>
+            <div class="preview__article--div--containerImg">
+              <img
+                src="./images/img_preview_generalist.png"
+                alt="Imagen de ejemplo"
+                class="js_previewImg preview__article--div--containerImg--img"
+              />
+            </div>
+            <p class="js_description preview__article--div--text">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia
+              aperiam fuga tempore? Debitis quo necessitatibus tenetur laborum.
+              Totam, eaque, sapiente dolor eum qui sint rem quo fuga, iste illo
+              similique?
+            </p>
+          </div>
+        </article>
+        <button class="preview-btn-resert">
+          <i class="fa-solid fa-trash"></i>Restablecer
+        </button>
+      </section>
 
       <footer class="footer">
-  <h2 class="footer-text">Awesome Profile-News @2025</h2>
-</footer>
-
+        <h2 class="footer-text">Awesome Profile-News @2025</h2>
+      </footer>
     </main>
   </body>
 
