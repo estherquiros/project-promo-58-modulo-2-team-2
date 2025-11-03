@@ -19,8 +19,8 @@ const defaultTitle = "Título";
 const defaultSubTitle = "Subtítulo";
 const defaultDate = "Fecha";
 const defaultEdition = "Nº de edición";
-const defaultDescription = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia aperiam fuga tempore? Debitis quo necessitatibus tenetur laborum. Totam, eaque, sapiente dolor eum qui sint rem quo fuga, iste illo similique?";
-const angleFill = document.querySelector("#angleFill");
+const defaultDescription =
+  "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia aperiam fuga tempore? Debitis quo necessitatibus tenetur laborum. Totam, eaque, sapiente dolor eum qui sint rem quo fuga, iste illo similique?";
 
 //EVENTS
 
@@ -73,7 +73,6 @@ buttonFill.addEventListener(`click`, (ev) => {
   ev.preventDefault();
   collapseAllSections(formSection);
   formSection.classList.toggle(`collapsed`);
-  rotateArrow(angleFill);
 });
 
 nameInput.addEventListener("input", (ev) => {

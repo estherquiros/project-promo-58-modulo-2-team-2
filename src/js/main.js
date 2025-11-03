@@ -53,8 +53,7 @@ economyDesign.addEventListener("click", () => addStyle("type-economist"));
 newspaperDesign.addEventListener("click", () => addStyle("type-generalist"));
 
 
-
-import "./partials/form/preview.js";
 import "./partials/form/sections/design.js";
 import "./partials/form/sections/fill.js";
 import "./partials/form/sections/share.js";
+import "./partials/form/preview.js";
