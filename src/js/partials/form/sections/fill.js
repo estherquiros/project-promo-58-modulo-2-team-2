@@ -22,6 +22,10 @@ const defaultEdition = "Nº de edición";
 const defaultDescription = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia aperiam fuga tempore? Debitis quo necessitatibus tenetur laborum. Totam, eaque, sapiente dolor eum qui sint rem quo fuga, iste illo similique?";
 
 
+//FUNCIONES
+
+
+
 //EVENTS
 
 fileInput.addEventListener (`change`, (event) => {
@@ -45,20 +49,20 @@ fileInput.addEventListener (`change`, (event) => {
     } else {
         // Asumiendo que 'card' es la tarjeta donde están las clases de diseño
         if (card.classList.contains("type-sensacionalist")) {
-            imagePreview.src = "/images/img_preview_sensacionalist.png";
+            imagePreview.src = "../images/img_preview_sensacionalist.png";
         }
        
         else if (card.classList.contains("type-economist")) {
-            imagePreview.src = "/images/img_preview_economy.png";
+            imagePreview.src = "./images/img_preview_economy.png";
         }
        
         else if (card.classList.contains("type-generalist")) {
-            imagePreview.src = "/images/img_preview_generalist.png";
+            imagePreview.src = "./images/img_preview_generalist.png";
         }
        
         else {
             // Fallback si no hay ninguna clase (o si quieres una imagen por defecto)
-            imagePreview.src = "/images/img_preview_generalist.png";
+            imagePreview.src = "./images/img_preview_generalist.png";
         }
     }
 });
