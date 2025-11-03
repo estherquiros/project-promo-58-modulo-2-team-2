@@ -132,11 +132,14 @@ label {
 }
 
 #angleDesign {
-    @include angles();
-    padding-left: 1rem;
-    &.rotated{
-      transform: rotate(90deg);
-    }
+  @include angles();  
+  align-items: center;
+  padding-left: 1rem;
+  
+  &.rotated {
+    transform: rotate(90deg);
+     
+  }
 }
 
 @media (min-width: 768px) {
@@ -166,5 +169,15 @@ label {
   .newspaperColor3 {
     width: 2.4rem;
     height: 2.4rem;
+  }  
+
+  #angleDesign {
+  @include angles();  
+  display: inline-flex;      
   }
 }
+  
+
+
+
+
