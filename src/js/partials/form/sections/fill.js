@@ -15,6 +15,7 @@ const datePreview = document.querySelector(".js_date");
 const editionPreview = document.querySelector(".js_edition");
 const fileInput = document.querySelector("#file");
 const imagePreview = document.querySelector(".js_previewImg");
+const angleFill = document.querySelector("#angleFill");
 const defaultTitle = "Título";
 const defaultSubTitle = "Subtítulo";
 const defaultDate = "Fecha";
@@ -71,8 +72,7 @@ dateInput.addEventListener(`change`, (ev) => {
 
 buttonFill.addEventListener(`click`, (ev) => {
   ev.preventDefault();
-  collapseAllSections(formSection);
-  formSection.classList.toggle(`collapsed`);
+  toggleSection(formSection, angleFill);
 });
 
 nameInput.addEventListener("input", (ev) => {
