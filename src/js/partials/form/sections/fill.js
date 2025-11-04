@@ -20,16 +20,11 @@ const defaultTitle = "Título";
 const defaultSubTitle = "Subtítulo";
 const defaultDate = "Fecha";
 const defaultEdition = "Nº de edición";
-<<<<<<< HEAD
 const defaultDescription = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia aperiam fuga tempore? Debitis quo necessitatibus tenetur laborum. Totam, eaque, sapiente dolor eum qui sint rem quo fuga, iste illo similique?";
 
 //FUNCIONES
 
 
-=======
-const defaultDescription =
-  "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia aperiam fuga tempore? Debitis quo necessitatibus tenetur laborum. Totam, eaque, sapiente dolor eum qui sint rem quo fuga, iste illo similique?";
->>>>>>> 98079e8dc1a82b5a06951176d6ba43c9869c1286
 
 //EVENTS
 
@@ -59,7 +54,6 @@ fileInput.addEventListener(`change`, (event) => {
     } else if (card.classList.contains("type-generalist")) {
       imagePreview.src = "/images/img_preview_generalist.png";
     } else {
-<<<<<<< HEAD
         // Asumiendo que 'card' es la tarjeta donde están las clases de diseño
         if (card.classList.contains("type-sensacionalist")) {
             imagePreview.src = "./images/img_preview_sensacionalist.png";
@@ -77,10 +71,6 @@ fileInput.addEventListener(`change`, (event) => {
             // Fallback si no hay ninguna clase (o si quieres una imagen por defecto)
             imagePreview.src = "./images/img_preview_generalist.png";
         }
-=======
-      // Fallback si no hay ninguna clase (o si quieres una imagen por defecto)
-      imagePreview.src = "/images/img_preview_generalist.png";
->>>>>>> 98079e8dc1a82b5a06951176d6ba43c9869c1286
     }
   }
 });
@@ -119,11 +109,8 @@ descriptionInput.addEventListener("input", (ev) => {
   descriptionPreview.innerHTML =
     descriptionFill.trim() === "" ? defaultDescription : descriptionFill;
 });
-<<<<<<< HEAD
 
 
 
 
 
-=======
->>>>>>> 98079e8dc1a82b5a06951176d6ba43c9869c1286
