@@ -1,16 +1,16 @@
 @use "../../core/variables" as *;
+@use "../../core/mixins" as *;
 
 .designOptions {
   display: flex;
   flex-direction: column;
-  padding-bottom: 1.5rem;
+  @include sectionsform();
 }
 
 .design-form-section {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-left: 1.25rem;
 }
 
 .collapsed {
@@ -19,8 +19,7 @@
 
 .titleDesign {
   flex-shrink: 0;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-block: 2rem;
   font-family: $font_printwriter;
   text-transform: uppercase;
   font-size: 2rem;
@@ -132,6 +131,17 @@ label {
   }
 }
 
+#angleDesign {
+  @include angles();  
+  align-items: center;
+  padding-left: 1rem;
+  
+  &.rotated {
+    transform: rotate(90deg);
+     
+  }
+}
+
 @media (min-width: 768px) {
   .titleDesign {
     font-size: 3rem;
@@ -159,5 +169,15 @@ label {
   .newspaperColor3 {
     width: 2.4rem;
     height: 2.4rem;
+  }  
+
+  #angleDesign {
+  @include angles();  
+  display: inline-flex;      
   }
 }
+  
+
+
+
+

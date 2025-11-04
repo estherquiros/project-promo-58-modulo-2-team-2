@@ -2,19 +2,6 @@
 
 console.log(">> Ready :)");
 
-const collapseAllSections = (element) => {
-  const collapsibleSections = document.querySelectorAll(".js_collapsible");
-  for (const section of collapsibleSections) {
-    if (section === element) continue;
-    section.classList.add("collapsed");
-  }
-};
-
-import "./partials/form/sections/design.js";
-import "./partials/form/sections/fill.js";
-import "./partials/form/sections/share.js";
-import "./partials/form/preview.js";
-
 const magazineDesign = document.querySelector("#magazineDesign");
 const economyDesign = document.querySelector("#economyDesign");
 const newspaperDesign = document.querySelector("#newspaperDesign");
@@ -23,12 +10,39 @@ const ImgPreview = document.querySelector(
   ".preview__article--div--containerImg--img"
 );
 
-/* Variable para las flechas*/
-const angles = document.querySelector(".share-angles svg, .js-share-angles");
+const collapseAllSections = (element) => {
+  const collapsibleSections = document.querySelectorAll(".js_collapsible");
 
-const rotateArrow = () => {
-  angles.classList.toggle("rotated");
+  for (const section of collapsibleSections) {
+    const sectionContains = section.closest("section");
+    const spanAngle = sectionContains.querySelector(".js-share-angles");
+    if (section === element) continue;
+    section.classList.add("collapsed");
+    rotateArrow(spanAngle, false);
+  }
 };
+
+const rotateArrow = (angle, rotate = true) => {
+   if (rotate) {
+    angle.classList.add("rotated");
+  } else {
+    angle.classList.remove("rotated");
+  }
+};
+
+const toggleSection = (content, angle) => {
+  const isCollapsed = content.classList.contains("collapsed");
+
+  if (isCollapsed) {
+    collapseAllSections(content);
+    content.classList.remove("collapsed");
+    rotateArrow(angle, true);
+  } else {
+    content.classList.add("collapsed");
+    rotateArrow(angle, false);
+  }
+};
+
 
 const addStyle = (style) => {
   const stylesToRemove = [
@@ -56,3 +70,8 @@ const addStyle = (style) => {
 magazineDesign.addEventListener("click", () => addStyle("type-sensacionalist"));
 economyDesign.addEventListener("click", () => addStyle("type-economist"));
 newspaperDesign.addEventListener("click", () => addStyle("type-generalist"));
+
+import "./partials/form/sections/design.js";
+import "./partials/form/sections/fill.js";
+import "./partials/form/sections/share.js";
+import "./partials/form/preview.js";
