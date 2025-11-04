@@ -1,0 +1,12 @@
+// Rotaciones para cada sección
+#angleDesign.rotated {
+  transform: rotate(90deg);
+}
+
+#angleFill.rotated {
+  transform: rotate(-90deg);
+}
+
+#angleShare.rotated {
+  transform: rotate(180deg);
+}
