@@ -21,6 +21,8 @@ const defaultSubTitle = "Subtítulo";
 const defaultDate = "Fecha";
 const defaultEdition = "Nº de edición";
 const defaultDescription = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia aperiam fuga tempore? Debitis quo necessitatibus tenetur laborum. Totam, eaque, sapiente dolor eum qui sint rem quo fuga, iste illo similique?";
+const imageMiniature = document.querySelector ('.js_image_miniature');
+
 
 //FUNCIONES
 
@@ -41,6 +43,8 @@ fileInput.addEventListener(`change`, (event) => {
       // e.target.result es la URL de datos (Base64) del archivo
       // Asigna esta URL al atributo 'src' de la etiqueta <img> del preview
       imagePreview.src = e.target.result;
+      console.log ('url' + e.target.result.urldata);
+      imageMiniature.style.backgroundImage = `url ("${e.target.result}")`;
     };
 
     // 4. Inicia la lectura del archivo como una URL de datos (esto dispara el 'onload')

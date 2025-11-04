@@ -72,6 +72,21 @@
     }
 }
 
+.imageContainer {
+ position: relative;
+}
+
+.form_photohumb {
+  border: 1px solid #ddd;
+  width: 5rem;
+  height: 5rem;
+  position: absolute;
+  background-image: url("/images/img_preview_generalist.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 @media (min-width: 768px) {
   .titleFill {
     font-size: 3rem;
