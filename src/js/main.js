@@ -23,7 +23,7 @@ const collapseAllSections = (element) => {
 };
 
 const rotateArrow = (angle, rotate = true) => {
-   if (rotate) {
+  if (rotate) {
     angle.classList.add("rotated");
   } else {
     angle.classList.remove("rotated");
@@ -43,7 +43,6 @@ const toggleSection = (content, angle) => {
   }
 };
 
-
 const addStyle = (style) => {
   const stylesToRemove = [
     "type-sensacionalist",
@@ -59,11 +58,35 @@ const addStyle = (style) => {
   card.classList.add("preview__article", style);
 
   if (style === "type-sensacionalist") {
-    ImgPreview.src = "/images/img_preview_sensacionalist.png";
+    if (fileInput.files.length > 0) {
+      console.log("Hay un archivo seleccionado");
+      const imgInLocal = localStorage.getItem("imagePreview");
+      ImgPreview.src = `"${imgInLocal}"`;
+    } else {
+      console.log("No hay ningún archivo seleccionado");
+      // Aquí puedes poner los estilos por defecto
+      ImgPreview.src = "/images/img_preview_sensacionalist.png";
+    }
   } else if (style === "type-economist") {
-    ImgPreview.src = "/images/img_preview_economy.png";
+    if (fileInput.files.length > 0) {
+      console.log("Hay un archivo seleccionado");
+      const imgInLocal = localStorage.getItem("imagePreview");
+      ImgPreview.src = `"${imgInLocal}"`;
+    } else {
+      console.log("No hay ningún archivo seleccionado");
+      // Aquí puedes poner los estilos por defecto
+      ImgPreview.src = "/images/img_preview_economy.png";
+    }
   } else if (style === "type-generalist") {
-    ImgPreview.src = "/images/img_preview_generalist.png";
+    if (fileInput.files.length > 0) {
+      console.log("Hay un archivo seleccionado");
+      const imgInLocal = localStorage.getItem("imagePreview");
+      ImgPreview.src = `"${imgInLocal}"`;
+    } else {
+      console.log("No hay ningún archivo seleccionado");
+      // Aquí puedes poner los estilos por defecto
+      ImgPreview.src = "/images/img_preview_generalist.png";
+    }
   }
 };
 
