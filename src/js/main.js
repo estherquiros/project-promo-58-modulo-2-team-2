@@ -57,30 +57,17 @@ const addStyle = (style) => {
 
   card.classList.add("preview__article", style);
 
-  if (style === "type-sensacionalist") {
-    if (fileInput.files.length > 0) {
-      const imgInLocal = localStorage.getItem("imagePreview");
+const imgInLocal = localStorage.getItem("imagePreview");
+  const hasFile = fileInput.files.length > 0;
 
-      ImgPreview.src = imgInLocal;
-    } else {
-      ImgPreview.src = "/images/img_preview_sensacionalist.png";
-    }
+  if (style === "type-sensacionalist") {
+    ImgPreview.src = hasFile
+      ? imgInLocal
+      : "/images/img_preview_sensacionalist.png";
   } else if (style === "type-economist") {
-    if (fileInput.files.length > 0) {
-      const imgInLocal = localStorage.getItem("imagePreview");
-      ImgPreview.src = imgInLocal;
-    } else {
-      ImgPreview.src = "/images/img_preview_economy.png";
-    }
+    ImgPreview.src = hasFile ? imgInLocal : "/images/img_preview_economy.png";
   } else if (style === "type-generalist") {
-    if (fileInput.files.length > 0) {
-      const imgInLocal = localStorage.getItem("imagePreview");
-      ImgPreview.src = imgInLocal;
-    } else {
-      console.log("No hay ningún archivo seleccionado");
-      // Aquí puedes poner los estilos por defecto
-      ImgPreview.src = "/images/img_preview_generalist.png";
-    }
+    ImgPreview.src = hasFile ? imgInLocal : "images/img_preview_generalist.png";
   }
 };
 
