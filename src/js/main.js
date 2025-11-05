@@ -23,7 +23,7 @@ const collapseAllSections = (element) => {
 };
 
 const rotateArrow = (angle, rotate = true) => {
-   if (rotate) {
+  if (rotate) {
     angle.classList.add("rotated");
   } else {
     angle.classList.remove("rotated");
@@ -43,7 +43,6 @@ const toggleSection = (content, angle) => {
   }
 };
 
-
 const addStyle = (style) => {
   const stylesToRemove = [
     "type-sensacionalist",
@@ -58,12 +57,17 @@ const addStyle = (style) => {
 
   card.classList.add("preview__article", style);
 
+const imgInLocal = localStorage.getItem("imagePreview");
+  const hasFile = fileInput.files.length > 0;
+
   if (style === "type-sensacionalist") {
-    ImgPreview.src = "/images/img_preview_sensacionalist.png";
+    ImgPreview.src = hasFile
+      ? imgInLocal
+      : "/images/img_preview_sensacionalist.png";
   } else if (style === "type-economist") {
-    ImgPreview.src = "/images/img_preview_economy.png";
+    ImgPreview.src = hasFile ? imgInLocal : "/images/img_preview_economy.png";
   } else if (style === "type-generalist") {
-    ImgPreview.src = "/images/img_preview_generalist.png";
+    ImgPreview.src = hasFile ? imgInLocal : "images/img_preview_generalist.png";
   }
 };
 

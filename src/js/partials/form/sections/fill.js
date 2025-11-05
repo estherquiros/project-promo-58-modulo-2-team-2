@@ -24,6 +24,7 @@ const defaultDescription = "Lorem ipsum dolor sit, amet consectetur adipisicing 
 const imageMiniature = document.querySelector ('.js_image_miniature');
 
 
+
 //FUNCIONES
 
 
@@ -43,8 +44,8 @@ fileInput.addEventListener(`change`, (event) => {
       // e.target.result es la URL de datos (Base64) del archivo
       // Asigna esta URL al atributo 'src' de la etiqueta <img> del preview
       imagePreview.src = e.target.result;
-      console.log ('url' + e.target.result.urldata);
-      imageMiniature.style.backgroundImage = `url ("${e.target.result}")`;
+      imageMiniature.style.backgroundImage = `url("${e.target.result}")`;
+      localStorage.setItem ('imagePreview',e.target.result);
     };
 
     // 4. Inicia la lectura del archivo como una URL de datos (esto dispara el 'onload')
@@ -53,28 +54,17 @@ fileInput.addEventListener(`change`, (event) => {
     // Asumiendo que 'card' es la tarjeta donde están las clases de diseño
     if (card.classList.contains("type-sensacionalist")) {
       imagePreview.src = "/images/img_preview_sensacionalist.png";
+      imageMiniature.style.backgroundImage = "url('/images/img_preview_sensacionalist.png')";
     } else if (card.classList.contains("type-economist")) {
       imagePreview.src = "/images/img_preview_economy.png";
+      imageMiniature.style.backgroundImage = "url('/images/img_preview_economy.png')";
     } else if (card.classList.contains("type-generalist")) {
       imagePreview.src = "/images/img_preview_generalist.png";
-    } else {
-        // Asumiendo que 'card' es la tarjeta donde están las clases de diseño
-        if (card.classList.contains("type-sensacionalist")) {
-            imagePreview.src = "./images/img_preview_sensacionalist.png";
-        }
-       
-        else if (card.classList.contains("type-economist")) {
-            imagePreview.src = "./images/img_preview_economy.png";
-        }
-       
-        else if (card.classList.contains("type-generalist")) {
-            imagePreview.src = "./images/img_preview_generalist.png";
-        }
-       
-        else {
+      imageMiniature.style.backgroundImage = "url('/images/img_preview_generalist.png')";
+    }
+      else {
             // Fallback si no hay ninguna clase (o si quieres una imagen por defecto)
-            imagePreview.src = "./images/img_preview_generalist.png";
-        }
+      imagePreview.src = "./images/img_preview_generalist.png";
     }
   }
 });
@@ -115,6 +105,13 @@ descriptionInput.addEventListener("input", (ev) => {
 });
 
 
+if (!localStorage.getItem('imagePreview')){
+  localStorage.setItem ('imagePreview', '');
+}
+else {
+  const imageLocalStorage = localStorage.getItem('imagePreview');
+  console.log ('valor de la imagen en localstorage'+ imageLocalStorage)
+}
 
 
 
