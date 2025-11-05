@@ -35,6 +35,7 @@ const generateShareLink = (objectToSend, element) => {
       }
 
       element.innerHTML = `${LINK_PREVIEW_URL}/${response.infoID}`;
+      element.href = `${LINK_PREVIEW_URL}/${response.infoID}`;
     });
 };
 
