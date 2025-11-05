@@ -24,6 +24,7 @@ const defaultDescription = "Lorem ipsum dolor sit, amet consectetur adipisicing 
 const imageMiniature = document.querySelector ('.js_image_miniature');
 
 
+
 //FUNCIONES
 
 
@@ -44,6 +45,7 @@ fileInput.addEventListener(`change`, (event) => {
       // Asigna esta URL al atributo 'src' de la etiqueta <img> del preview
       imagePreview.src = e.target.result;
       imageMiniature.style.backgroundImage = `url("${e.target.result}")`;
+      localStorage.setItem ('imagePreview',e.target.result);
     };
 
     // 4. Inicia la lectura del archivo como una URL de datos (esto dispara el 'onload')
@@ -103,6 +105,13 @@ descriptionInput.addEventListener("input", (ev) => {
 });
 
 
+if (!localStorage.getItem('imagePreview')){
+  localStorage.setItem ('imagePreview', '');
+}
+else {
+  const imageLocalStorage = localStorage.getItem('imagePreview');
+  console.log ('valor de la imagen en localstorage'+ imageLocalStorage)
+}
 
 
 
