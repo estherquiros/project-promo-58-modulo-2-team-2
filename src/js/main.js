@@ -59,29 +59,23 @@ const addStyle = (style) => {
 
   if (style === "type-sensacionalist") {
     if (fileInput.files.length > 0) {
-      console.log("Hay un archivo seleccionado");
       const imgInLocal = localStorage.getItem("imagePreview");
-      ImgPreview.src = `"${imgInLocal}"`;
+
+      ImgPreview.src = imgInLocal;
     } else {
-      console.log("No hay ningún archivo seleccionado");
-      // Aquí puedes poner los estilos por defecto
       ImgPreview.src = "/images/img_preview_sensacionalist.png";
     }
   } else if (style === "type-economist") {
     if (fileInput.files.length > 0) {
-      console.log("Hay un archivo seleccionado");
       const imgInLocal = localStorage.getItem("imagePreview");
-      ImgPreview.src = `"${imgInLocal}"`;
+      ImgPreview.src = imgInLocal;
     } else {
-      console.log("No hay ningún archivo seleccionado");
-      // Aquí puedes poner los estilos por defecto
       ImgPreview.src = "/images/img_preview_economy.png";
     }
   } else if (style === "type-generalist") {
     if (fileInput.files.length > 0) {
-      console.log("Hay un archivo seleccionado");
       const imgInLocal = localStorage.getItem("imagePreview");
-      ImgPreview.src = `"${imgInLocal}"`;
+      ImgPreview.src = imgInLocal;
     } else {
       console.log("No hay ningún archivo seleccionado");
       // Aquí puedes poner los estilos por defecto
