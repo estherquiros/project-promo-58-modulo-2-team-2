@@ -4,7 +4,8 @@ const LINK_GENERATOR_API_URL = "https://dev.adalab.es/api/info/data";
 const LINK_PREVIEW_URL = "https://dev.adalab.es/api/info";
 
 const btn = document.querySelector(`.js_share_button`);
-const btnTwitter = document.querySelector(`.js_share_card`);
+const twitterSection = document.querySelector(`.js_share_card`);
+const btnTwitter = document.querySelector(`.js_button_twitter`);
 const angleShare = document.querySelector("#angleShare");
 const shareLink = document.querySelector(".js_share_link");
 
@@ -36,12 +37,14 @@ const generateShareLink = (objectToSend, element) => {
 
       element.innerHTML = `${LINK_PREVIEW_URL}/${response.infoID}`;
       element.href = `${LINK_PREVIEW_URL}/${response.infoID}`;
+
+      btnTwitter.classList.remove("collapsed");
     });
 };
 
 btn.addEventListener(`click`, (ev) => {
   ev.preventDefault();
-  btnTwitter.classList.toggle("collapsed");
+  twitterSection.classList.toggle("collapsed");
 
   const objectToSend = {
     field1: "1",
