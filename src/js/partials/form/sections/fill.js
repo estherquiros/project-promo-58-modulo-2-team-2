@@ -110,7 +110,6 @@ if (!localStorage.getItem('imagePreview')){
 }
 else {
   const imageLocalStorage = localStorage.getItem('imagePreview');
-  console.log ('valor de la imagen en localstorage'+ imageLocalStorage)
 }
 
 
