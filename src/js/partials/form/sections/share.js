@@ -53,7 +53,7 @@ btn.addEventListener(`click`, (ev) => {
     field7: shareMagazineDesign.checked,
     field8: shareEconomyDesign.checked,
     field9: shareNewspaperDesign.checked,
-    photo: localStorage.getItem("ImagePreview"),
+    photo: localStorage.getItem("imagePreview"),
   };
 
   generateShareLink(objectToSend, shareLink);
