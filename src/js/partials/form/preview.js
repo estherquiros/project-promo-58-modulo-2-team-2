@@ -19,6 +19,6 @@ btnReset.addEventListener('click', () => {
       card.classList.add ('preview__article');
 
   }
-  localStorage.removeItem('clave');
+  localStorage.removeItem('imagePreview');
 });
 
