@@ -30,7 +30,7 @@ const generateShareLink = (objectToSend, element) => {
     .then((res) => res.json())
     .then((response) => {
       if (response.success !== true) {
-        console.log("Error");
+        console.log("Error", response.error);
         return;
       }
 
@@ -64,4 +64,16 @@ const content = document.querySelector(`.js_share_content`);
 btn2.addEventListener(`click`, (ev) => {
   ev.preventDefault();
   toggleSection(content, angleShare);
+});
+
+btnTwitter.addEventListener("click", (ev) => {
+  ev.preventDefault();
+
+  const text = "¡Atento a esta noticia!";
+  const url = shareLink.href;
+  const hashtags = "adalaber";
+
+  const twitterUrl = `https://twitter.com/intent/tweet?text=${text}&url=${url}&hashtags=${hashtags}`;
+
+  window.open(twitterUrl, "_blank");
 });
