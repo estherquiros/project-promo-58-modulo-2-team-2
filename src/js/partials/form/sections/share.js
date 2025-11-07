@@ -8,7 +8,14 @@ const btnTwitter = document.querySelector(`.js_share_card`);
 const angleShare = document.querySelector("#angleShare");
 const shareLink = document.querySelector(".js_share_link");
 
-const titleInput = document.querySelector("#newsHeadline");
+const shareTitleInput = document.querySelector("#newsHeadline");
+const shareSubtitleInput = document.querySelector("#newsSubtitle");
+const shareMessage = document.querySelector("#message");
+const sharePublicationDate = document.querySelector("#publicationDate");
+const sharePublicationNumber = document.querySelector("#publicationNumber");
+const shareMagazineDesign = document.querySelector("#magazineDesign");
+const shareEconomyDesign = document.querySelector("#economyDesign");
+const shareNewspaperDesign = document.querySelector("#newspaperDesign");
 
 const generateShareLink = (objectToSend, element) => {
   const options = {
@@ -28,6 +35,7 @@ const generateShareLink = (objectToSend, element) => {
       }
 
       element.innerHTML = `${LINK_PREVIEW_URL}/${response.infoID}`;
+      element.href = `${LINK_PREVIEW_URL}/${response.infoID}`;
     });
 };
 
@@ -37,11 +45,15 @@ btn.addEventListener(`click`, (ev) => {
 
   const objectToSend = {
     field1: "1",
-    field2: titleInput.value,
-    field3: titleInput.value,
-    field4: titleInput.value,
-    field5: titleInput.value,
-    photo: "foto",
+    field2: shareTitleInput.value,
+    field3: shareSubtitleInput.value,
+    field4: shareMessage.value,
+    field5: sharePublicationDate.value,
+    field6: sharePublicationNumber.value,
+    field7: shareMagazineDesign.checked,
+    field8: shareEconomyDesign.checked,
+    field9: shareNewspaperDesign.checked,
+    photo: localStorage.getItem("ImagePreview"),
   };
 
   generateShareLink(objectToSend, shareLink);

@@ -60,8 +60,8 @@ fileInput.addEventListener(`change`, (event) => {
       imageMiniature.style.backgroundImage = "url('/images/img_preview_economy.png')";
     } else if (card.classList.contains("type-generalist")) {
       imagePreview.src = "/images/img_preview_generalist.png";
-      imageMiniature.style.backgroundImage = "url('/images/img_preview_generalist.png')"; 
-    } 
+      imageMiniature.style.backgroundImage = "url('/images/img_preview_generalist.png')";
+    }
       else {
             // Fallback si no hay ninguna clase (o si quieres una imagen por defecto)
       imagePreview.src = "./images/img_preview_generalist.png";
