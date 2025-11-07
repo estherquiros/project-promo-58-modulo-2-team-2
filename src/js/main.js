@@ -63,9 +63,9 @@ const imgInLocal = localStorage.getItem("imagePreview");
   if (style === "type-sensacionalist") {
     ImgPreview.src = hasFile
       ? imgInLocal
-      : "/images/img_preview_sensacionalist.png";
+      : "images/img_preview_sensacionalist.png";
   } else if (style === "type-economist") {
-    ImgPreview.src = hasFile ? imgInLocal : "/images/img_preview_economy.png";
+    ImgPreview.src = hasFile ? imgInLocal : "images/img_preview_economy.png";
   } else if (style === "type-generalist") {
     ImgPreview.src = hasFile ? imgInLocal : "images/img_preview_generalist.png";
   }
