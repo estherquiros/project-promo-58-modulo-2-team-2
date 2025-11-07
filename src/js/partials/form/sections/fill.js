@@ -53,14 +53,14 @@ fileInput.addEventListener(`change`, (event) => {
   } else {
     // Asumiendo que 'card' es la tarjeta donde están las clases de diseño
     if (card.classList.contains("type-sensacionalist")) {
-      imagePreview.src = "/images/img_preview_sensacionalist.png";
-      imageMiniature.style.backgroundImage = "url('/images/img_preview_sensacionalist.png')";
+      imagePreview.src = "./images/img_preview_sensacionalist.png";
+      imageMiniature.style.backgroundImage = "url('./images/img_preview_sensacionalist.png')";
     } else if (card.classList.contains("type-economist")) {
-      imagePreview.src = "/images/img_preview_economy.png";
-      imageMiniature.style.backgroundImage = "url('/images/img_preview_economy.png')";
+      imagePreview.src = "./images/img_preview_economy.png";
+      imageMiniature.style.backgroundImage = "url('./images/img_preview_economy.png')";
     } else if (card.classList.contains("type-generalist")) {
-      imagePreview.src = "/images/img_preview_generalist.png";
-      imageMiniature.style.backgroundImage = "url('/images/img_preview_generalist.png')";
+      imagePreview.src = "./images/img_preview_generalist.png";
+      imageMiniature.style.backgroundImage = "url('./images/img_preview_generalist.png')";
     }
       else {
             // Fallback si no hay ninguna clase (o si quieres una imagen por defecto)
