@@ -5,7 +5,7 @@
 ## 🌐 Demo en Línea
 
 Puedes probar la aplicación aquí 👉
-🔗 [**Generador de Artículos de Periódico - GitHub Pages**](https://estherquiros.github.io/project-promo-58-modulo-2-team-2/form-page.html)
+🔗 [**Generador de Artículos de Periódico - GitHub Pages**](https://estherquiros.github.io/project-promo-58-modulo-2-team-2/)
 
 ---
 
