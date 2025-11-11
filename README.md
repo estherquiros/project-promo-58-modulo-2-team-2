@@ -2,6 +2,13 @@
 
 ![Vista Previa del Proyecto](./public/images/newspapper.png)
 
+## 🌐 Demo en Línea
+
+Puedes probar la aplicación aquí 👉
+🔗 [**Generador de Artículos de Periódico - GitHub Pages**](https://estherquiros.github.io/project-promo-58-modulo-2-team-2/form-page.html)
+
+---
+
 ## 📰 Sobre el Proyecto
 
 Este proyecto es una aplicación web que permite a los usuarios crear tarjetas de artículos personalizables con estilo de periódico. Los usuarios pueden ingresar la información de su artículo y generar una tarjeta compartible con el estilo de tres diseños de periódico distintos.
