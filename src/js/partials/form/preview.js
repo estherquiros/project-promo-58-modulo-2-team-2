@@ -11,7 +11,7 @@ btnReset.addEventListener('click', () => {
   descriptionPreview.innerHTML = defaultDescription;
   datePreview.innerHTML = defaultDate;
   editionPreview.innerHTML = defaultEdition;
-  imagePreview.src = '/images/img_preview_generalist.png'
+  imagePreview.src = 'images/img_preview_generalist.png'
 
     // Restaurar la imagen por defecto según el diseño actual
   if (card.classList.length > 1) {

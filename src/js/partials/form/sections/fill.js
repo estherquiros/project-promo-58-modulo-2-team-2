@@ -64,7 +64,7 @@ fileInput.addEventListener(`change`, (event) => {
     }
       else {
             // Fallback si no hay ninguna clase (o si quieres una imagen por defecto)
-      imagePreview.src = "./images/img_preview_generalist.png";
+      imagePreview.src = "images/img_preview_generalist.png";
     }
   }
 });
